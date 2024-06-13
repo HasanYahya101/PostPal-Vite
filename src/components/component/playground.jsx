@@ -194,13 +194,16 @@ export function Playground() {
                         <div className="w-1/2 border-r">
                             <Tabs defaultValue="all">
                                 <div className="justify-center">
-                                    <div className="flex p-4 font-bold text-xl h-16 bg-white border-r border-b border-l">
-                                        <span className="ml-2">
+                                    <div className="flex p-2 font-bold text-xl h-16 bg-white border-r border-b border-l self-center">
+                                        <span className="ml-2 p-2">
                                             Inbox
                                         </span>
-                                        <Badge variant="secondary" className="p-2 ml-2 rounded-full">128</Badge>
-                                        <div className="flex ml-auto gap-8">
-                                            <TabsList className="ml-4">
+                                        <div className="p-2 ml-1">
+                                            <Badge variant="secondary">128</Badge>
+                                        </div>
+                                        <div className="ml-auto p-1">
+                                            <TabsList className="ml-4"
+                                            >
                                                 <TabsTrigger
                                                     value="all"
                                                     className="text-zinc-600 dark:text-zinc-200"
