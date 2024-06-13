@@ -36,8 +36,24 @@ import {
     DropdownMenuLabel,
     DropdownMenuSeparator,
     DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@/components/ui/dropdown-menu";
+import addDays from "date-fns/addDays";
+import addHours from "date-fns/addHours";
+import format from "date-fns/format";
+import getDay from 'date-fns/getDay';
+import { Calendar } from "../ui/calendar";
+import {
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+} from "@/components/ui/popover";
 
+const today = new Date();
+
+const nextSaturday = (date) => {
+    const day = getDay(date);
+    return addDays(date, (6 - day + 7) % 7);
+};
 
 export function Playground() {
 
@@ -301,6 +317,65 @@ export function Playground() {
                                                 </Button>
                                             </TooltipTrigger>
                                             <TooltipContent className="text-sm font-normal text-gray-500">Move to trash</TooltipContent>
+                                        </Tooltip>
+                                        <Tooltip>
+                                            <Popover>
+                                                <PopoverTrigger asChild>
+                                                    <TooltipTrigger asChild>
+                                                        <Button variant="ghost" size="icon">
+                                                            <Clock className="h-4 w-4" />
+                                                            <span className="sr-only">Snooze</span>
+                                                        </Button>
+                                                    </TooltipTrigger>
+                                                </PopoverTrigger>
+                                                <PopoverContent className="flex w-[535px] p-0">
+                                                    <div className="flex flex-col gap-2 border-r px-2 py-4">
+                                                        <div className="px-4 text-sm font-medium">Snooze until</div>
+                                                        <div className="grid min-w-[250px] gap-1">
+                                                            <Button
+                                                                variant="ghost"
+                                                                className="justify-start font-normal"
+                                                            >
+                                                                Later today{" "}
+                                                                <span className="ml-auto text-muted-foreground">
+                                                                    {format(addHours(today, 4), "E, h:m b")}
+                                                                </span>
+                                                            </Button>
+                                                            <Button
+                                                                variant="ghost"
+                                                                className="justify-start font-normal"
+                                                            >
+                                                                Tomorrow
+                                                                <span className="ml-auto text-muted-foreground">
+                                                                    {format(addDays(today, 1), "E, h:m b")}
+                                                                </span>
+                                                            </Button>
+                                                            <Button
+                                                                variant="ghost"
+                                                                className="justify-start font-normal"
+                                                            >
+                                                                This weekend
+                                                                <span className="ml-auto text-muted-foreground">
+                                                                    {format(nextSaturday(today), "E, h:m b")}
+                                                                </span>
+                                                            </Button>
+                                                            <Button
+                                                                variant="ghost"
+                                                                className="justify-start font-normal"
+                                                            >
+                                                                Next week
+                                                                <span className="ml-auto text-muted-foreground">
+                                                                    {format(addDays(today, 7), "E, h:m b")}
+                                                                </span>
+                                                            </Button>
+                                                        </div>
+                                                    </div>
+                                                    <div className="p-2">
+                                                        <Calendar />
+                                                    </div>
+                                                </PopoverContent>
+                                            </Popover>
+                                            <TooltipContent>Snooze</TooltipContent>
                                         </Tooltip>
 
                                     </div>
