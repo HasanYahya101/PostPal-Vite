@@ -61,7 +61,7 @@ export function Playground() {
 
     return (
         (
-            <div className="flex h-screen bg-gray-100">
+            <div className="flex h-screen bg-gray-100 border-b">
                 <aside className="w-64 min-w-[224px] border-r bg-white">
                     <div className="flex items-center justify-center h-16 border-b self-center">
                         <Mail className="w-8 h-8 text-blue-500" />
