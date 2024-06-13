@@ -308,7 +308,6 @@ export function Playground() {
                                             </TooltipTrigger>
                                             <TooltipContent className="text-sm font-normal text-gray-500">Move to spam</TooltipContent>
                                         </Tooltip>
-                                        <Separator orientation="vertical" className="mx-1 h-6" />
                                         <Tooltip>
                                             <TooltipTrigger asChild>
                                                 <Button variant="ghost" size="icon" >
@@ -318,6 +317,7 @@ export function Playground() {
                                             </TooltipTrigger>
                                             <TooltipContent className="text-sm font-normal text-gray-500">Move to trash</TooltipContent>
                                         </Tooltip>
+                                        <Separator orientation="vertical" className="mx-1 h-6" />
                                         <Tooltip>
                                             <Popover>
                                                 <PopoverTrigger asChild>
@@ -328,7 +328,7 @@ export function Playground() {
                                                         </Button>
                                                     </TooltipTrigger>
                                                 </PopoverTrigger>
-                                                <PopoverContent className="flex w-[535px] p-0">
+                                                <PopoverContent className="flex w-[559px] p-0">
                                                     <div className="flex flex-col gap-2 border-r px-2 py-4">
                                                         <div className="px-4 text-sm font-medium">Snooze until</div>
                                                         <div className="grid min-w-[250px] gap-1">
