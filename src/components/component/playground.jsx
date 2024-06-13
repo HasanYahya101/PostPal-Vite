@@ -454,12 +454,20 @@ export function Playground() {
 
                             <div className="flex-1 h-[calc(100%-36vh)] p-4 -mb-60"
                             >
-                                <ScrollArea className="h-[calc(100%-16vh)] p-4">
+                                <ScrollArea className="h-[calc(100%-16vh)] p-4 mb-2">
                                     <p>
                                         Hi, let's have a meeting tomorrow to discuss the project. I've been reviewing the project details and
                                         have some ideas I'd like to share. It's crucial that we align on our next steps to ensure the project's
                                         success.
                                     </p>
+                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
+                                    <p>Best regards, William</p>
+                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
+                                    <p>Best regards, William</p>
+                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
+                                    <p>Best regards, William</p>
+                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
+                                    <p>Best regards, William</p>
                                     <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
                                     <p>Best regards, William</p>
                                 </ScrollArea>
