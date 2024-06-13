@@ -271,7 +271,7 @@ export function Playground() {
                         </div>
 
                         <div className="w-1/2">
-                            <div className="flex font-bold text-xl h-16 bg-white border-r border-b self-center">
+                            <div className="flex font-bold text-xl h-16 bg-white border-r border-b">
                                 <div className="flex items-center p-2">
                                     <div className="flex items-center gap-2 ml-1">
                                         <TooltipProvider>
@@ -305,7 +305,10 @@ export function Playground() {
                                             </Tooltip>
                                         </TooltipProvider>
                                     </div>
-                                    <div className="items-center flex gap-2">
+
+
+
+                                    <div className="ml-auto place-items-center flex gap-2">
                                         <TooltipProvider>
                                             <Tooltip>
                                                 <TooltipTrigger asChild>
@@ -358,7 +361,7 @@ export function Playground() {
                                 </div>
                             </div>
 
-                            <div className="flex items-center p-4 space-x-4 border-b">
+                            <div className="flex items-center p-5 space-x-4 border-b">
                                 <Avatar>
                                     <AvatarImage alt="William Smith" src="/placeholder.svg?height=40&width=40" />
                                     <AvatarFallback className="bg-white border border-gray-200 text-gray-500"
