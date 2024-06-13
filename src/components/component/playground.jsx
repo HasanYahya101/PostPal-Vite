@@ -24,8 +24,6 @@ export function Playground() {
 
     return (
         (
-
-
             <div className="flex h-screen bg-gray-100">
                 <aside className="w-64 border-r bg-white">
                     <div className="flex items-center justify-center h-16 border-b self-center">
@@ -193,41 +191,65 @@ export function Playground() {
                 </aside>
                 <main className="flex-1">
                     <div className="flex h-full">
+
                         <div className="w-1/2 border-r">
-                            <div className="justify-center">
-                                <div className="flex p-4 font-bold text-xl h-16 bg-white border-r border-b border-l">
-                                    <span className="ml-2">
-                                        Inbox
-                                    </span>
-                                    <Badge variant="secondary" className="p-2 ml-2 rounded-full">128</Badge>
-                                </div>
-                            </div>
-                            <div className="p-4 h-14">
-                                <div className="relative">
-                                    <Search className="ml-0.5 absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                                    <Input placeholder="Search" className="pl-8" />
-                                </div>
-                            </div>
-                            <ScrollArea className="h-[calc(100%-64px)] border mt-4">
-                                {/*<div key={index} className="flex p-4 space-x-4 border-b hover:bg-gray-50">*/}
-                                <div className="flex flex-col">
-                                    <div className="flex p-4 space-x-4 border-b hover:bg-gray-50">
-                                        <Avatar>
-                                            <AvatarImage src="/placeholder-user.jpg" />
-                                            <AvatarFallback className="bg-white border border-gray-200 text-gray-500"
-                                            >U</AvatarFallback>
-                                        </Avatar>
-                                        <div className="flex flex-col flex-1 min-w-0">
-                                            <span className="font-medium truncate">Name Surname</span>
-                                            <span className="text-sm text-gray-500 truncate">Subject of the email</span>
-                                            <span className="text-sm text-gray-500 truncate">Preview of the email content...</span>
-                                        </div>
-                                        <span className="text-sm text-gray-500">8 months ago</span>
-                                        {/*</div>*/}
+                            <Tabs defaultValue="all" className="">
+                                <div className="justify-center">
+                                    <div className="flex p-4 font-bold text-xl h-16 bg-white border-r border-b border-l">
+                                        <span className="ml-2">
+                                            Inbox
+                                        </span>
+                                        <Badge variant="secondary" className="p-2 ml-2 rounded-full">128</Badge>
+                                        <TabsList className="ml-auto">
+                                            <TabsTrigger
+                                                value="all"
+                                                className="text-zinc-600 dark:text-zinc-200"
+                                            >
+                                                All mail
+                                            </TabsTrigger>
+                                            <TabsTrigger
+                                                value="unread"
+                                                className="text-zinc-600 dark:text-zinc-200"
+                                            >
+                                                Unread
+                                            </TabsTrigger>
+                                        </TabsList>
                                     </div>
                                 </div>
-                            </ScrollArea>
+                                <div className="p-4 h-14">
+                                    <div className="relative">
+                                        <Search className="ml-0.5 absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                                        <Input placeholder="Search" className="pl-8" />
+                                    </div>
+                                </div>
+                                <ScrollArea className="h-[calc(100%-64px)] border mt-4">
+                                    {/*<div key={index} className="flex p-4 space-x-4 border-b hover:bg-gray-50">*/}
+                                    <div className="flex flex-col">
+                                        <div className="flex p-4 space-x-4 border-b hover:bg-gray-50">
+                                            <Avatar>
+                                                <AvatarImage src="/placeholder-user.jpg" />
+                                                <AvatarFallback className="bg-white border border-gray-200 text-gray-500"
+                                                >U</AvatarFallback>
+                                            </Avatar>
+                                            <div className="flex flex-col flex-1 min-w-0">
+                                                <span className="font-medium truncate">Name Surname</span>
+                                                <span className="text-sm text-gray-500 truncate">Subject of the email</span>
+                                                <span className="text-sm text-gray-500 truncate">Preview of the email content...</span>
+                                            </div>
+                                            <span className="text-sm text-gray-500">8 months ago</span>
+                                            {/*</div>*/}
+                                        </div>
+                                    </div>
+                                </ScrollArea>
+
+
+                            </Tabs>
+
+
                         </div>
+
+
+
                         <div className="w-1/2">
                             <div className="flex items-center p-4 space-x-4 border-b">
                                 <Avatar>
@@ -255,6 +277,7 @@ export function Playground() {
                             </div>
                         </div>
                     </div>
+
                 </main >
             </div >
         )
