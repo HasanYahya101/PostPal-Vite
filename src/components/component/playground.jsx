@@ -213,7 +213,8 @@ export function Playground() {
                                     <div className="flex p-4 space-x-4 border-b hover:bg-gray-50">
                                         <Avatar>
                                             <AvatarImage src="/placeholder-user.jpg" />
-                                            <AvatarFallback>U</AvatarFallback>
+                                            <AvatarFallback className="bg-white border border-gray-200 text-gray-500"
+                                            >U</AvatarFallback>
                                         </Avatar>
                                         <div className="flex flex-col flex-1 min-w-0">
                                             <span className="font-medium truncate">Name Surname</span>
