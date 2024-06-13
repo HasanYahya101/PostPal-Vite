@@ -272,8 +272,43 @@ export function Playground() {
 
                         <div className="w-1/2">
                             <div className="flex font-bold text-xl h-16 bg-white border-r border-b self-center">
-                                <div className="ml-auto flex items-center gap-2">
-                                    <TooltipProvider>
+                                <TooltipProvider className="flex">
+                                    <div className="mr-auto flex items-center gap-2 ml-4">
+                                        <Tooltip>
+                                            <TooltipTrigger asChild>
+                                                <Button variant="ghost" size="icon" >
+                                                    <Archive className="h-4 w-4" />
+                                                    <span className="sr-only">Archive</span>
+                                                </Button>
+                                            </TooltipTrigger>
+                                            <TooltipContent className="text-sm font-normal text-gray-500">Archive</TooltipContent>
+                                        </Tooltip>
+                                        <Tooltip>
+                                            <TooltipTrigger asChild>
+                                                <Button variant="ghost" size="icon" >
+                                                    <ArchiveX className="h-4 w-4" />
+                                                    <span className="sr-only">Move to spam</span>
+                                                </Button>
+                                            </TooltipTrigger>
+                                            <TooltipContent className="text-sm font-normal text-gray-500">Move to spam</TooltipContent>
+                                        </Tooltip>
+                                        <Separator orientation="vertical" className="mx-1 h-6" />
+                                        <Tooltip>
+                                            <TooltipTrigger asChild>
+                                                <Button variant="ghost" size="icon" >
+                                                    <Trash2 className="h-4 w-4" />
+                                                    <span className="sr-only">Move to trash</span>
+                                                </Button>
+                                            </TooltipTrigger>
+                                            <TooltipContent className="text-sm font-normal text-gray-500">Move to trash</TooltipContent>
+                                        </Tooltip>
+
+                                    </div>
+                                    <div className="flex justify-center align-middle">
+
+                                    </div>
+                                    <div className="ml-auto flex items-center gap-2">
+
                                         <Tooltip>
                                             <TooltipTrigger asChild>
                                                 <Button variant="ghost" size="icon">
@@ -305,24 +340,25 @@ export function Playground() {
                                             <TooltipContent className="text-sm font-normal text-gray-500"
                                             >Forward</TooltipContent>
                                         </Tooltip>
-                                    </TooltipProvider>
-                                    <Separator orientation="vertical" className="mx-2 h-6" />
-                                    <DropdownMenu>
-                                        <DropdownMenuTrigger asChild>
-                                            <Button variant="ghost" size="icon" className="mr-3">
-                                                <MoreVertical className="h-4 w-4" />
-                                                <span className="sr-only">More</span>
-                                            </Button>
-                                        </DropdownMenuTrigger>
-                                        <DropdownMenuContent align="end">
-                                            <DropdownMenuItem>Mark as unread</DropdownMenuItem>
-                                            <DropdownMenuItem>Reply</DropdownMenuItem>
-                                            <DropdownMenuItem>Forward</DropdownMenuItem>
-                                            <DropdownMenuItem>Delete</DropdownMenuItem>
-                                        </DropdownMenuContent>
-                                    </DropdownMenu>
 
-                                </div>
+                                        <Separator orientation="vertical" className="mx-2 h-6" />
+                                        <DropdownMenu>
+                                            <DropdownMenuTrigger asChild>
+                                                <Button variant="ghost" size="icon" className="mr-3">
+                                                    <MoreVertical className="h-4 w-4" />
+                                                    <span className="sr-only">More</span>
+                                                </Button>
+                                            </DropdownMenuTrigger>
+                                            <DropdownMenuContent align="end">
+                                                <DropdownMenuItem>Mark as unread</DropdownMenuItem>
+                                                <DropdownMenuItem>Reply</DropdownMenuItem>
+                                                <DropdownMenuItem>Forward</DropdownMenuItem>
+                                                <DropdownMenuItem>Delete</DropdownMenuItem>
+                                            </DropdownMenuContent>
+                                        </DropdownMenu>
+
+                                    </div>
+                                </TooltipProvider>
                             </div>
 
                             <div className="flex items-center p-5 space-x-4 border-b">
