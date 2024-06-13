@@ -196,6 +196,7 @@ export function Playground() {
                                     <span className="ml-2">
                                         Inbox
                                     </span>
+                                    <Badge variant="secondary" className="p-2 ml-2 rounded-full">128</Badge>
                                 </div>
                             </div>
                             <div className="p-4 h-16 border-black">
