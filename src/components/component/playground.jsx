@@ -17,6 +17,7 @@ import {
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export function Playground() {
 
@@ -207,7 +208,7 @@ export function Playground() {
                                     <Input placeholder="Search" className="pl-8" />
                                 </div>
                             </div>
-                            <ScrollArea className="h-[calc(100%-64px)]">
+                            <ScrollArea className="h-[calc(100%-64px)] border mt-4">
                                 {/*<div key={index} className="flex p-4 space-x-4 border-b hover:bg-gray-50">*/}
                                 <div className="flex flex-col">
                                     <div className="flex p-4 space-x-4 border-b hover:bg-gray-50">
