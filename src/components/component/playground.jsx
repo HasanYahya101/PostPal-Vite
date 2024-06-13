@@ -192,7 +192,6 @@ export function Playground() {
                 </aside>
                 <main className="flex-1">
                     <div className="flex h-full">
-
                         <div className="w-1/2 border-r">
                             <Tabs defaultValue="all">
                                 <div className="justify-center">
