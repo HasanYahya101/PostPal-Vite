@@ -251,6 +251,16 @@ export function Playground() {
                         </div>
 
                         <div className="w-1/2">
+                            <div className="flex font-bold text-xl h-16 bg-white border-r border-b self-center">
+                                <span className="ml-2 p-4">
+                                    Subject of the email
+                                </span>
+                                <div className="ml-auto p-2">
+                                    <Button variant="secondary">Reply</Button>
+                                    <Button className="ml-2">Forward</Button>
+                                </div>
+                            </div>
+
                             <div className="flex items-center p-4 space-x-4 border-b">
                                 <Avatar>
                                     <AvatarImage alt="William Smith" src="/placeholder.svg?height=40&width=40" />
