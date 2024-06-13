@@ -1,6 +1,5 @@
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
@@ -16,6 +15,8 @@ import {
     TooltipTrigger,
 } from "@/components/ui/tooltip"
 import { TooltipProvider } from "@radix-ui/react-tooltip";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
 export function Playground() {
 
@@ -29,7 +30,8 @@ export function Playground() {
                     <div className="flex items-center justify-center h-16 border-b self-center">
                         <Mail className="w-8 h-8 text-blue-500" />
                         <h1 className=" ml-4 text-lg font-semibold mr-2 truncate max-w-[10ch]">
-                            Alicia Koch</h1>
+                            Alicia Koch
+                        </h1>
                     </div>
                     <nav className="p-2">
                         <TooltipProvider>
@@ -206,7 +208,22 @@ export function Playground() {
                                 </div>
                             </div>
                             <ScrollArea className="h-[calc(100%-64px)]">
-                                <div className="flex flex-col" />
+                                {/*<div key={index} className="flex p-4 space-x-4 border-b hover:bg-gray-50">*/}
+                                <div className="flex flex-col">
+                                    <div className="flex p-4 space-x-4 border-b hover:bg-gray-50">
+                                        <Avatar>
+                                            <AvatarImage src="/placeholder-user.jpg" />
+                                            <AvatarFallback>U</AvatarFallback>
+                                        </Avatar>
+                                        <div className="flex flex-col flex-1 min-w-0">
+                                            <span className="font-medium truncate">Name Surname</span>
+                                            <span className="text-sm text-gray-500 truncate">Subject of the email</span>
+                                            <span className="text-sm text-gray-500 truncate">Preview of the email content...</span>
+                                        </div>
+                                        <span className="text-sm text-gray-500">8 months ago</span>
+                                        {/*</div>*/}
+                                    </div>
+                                </div>
                             </ScrollArea>
                         </div>
                         <div className="w-1/2">
@@ -236,7 +253,7 @@ export function Playground() {
                             </div>
                         </div>
                     </div>
-                </main>
+                </main >
             </div >
         )
     );
