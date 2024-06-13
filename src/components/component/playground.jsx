@@ -8,7 +8,7 @@ import {
     ResizablePanel,
     ResizablePanelGroup,
 } from "@/components/ui/resizable";
-import { Mail, Search, Users } from "lucide-react";
+import { Mail, Search, Users, Mails } from "lucide-react";
 import {
     Tooltip,
     TooltipContent,
@@ -82,12 +82,11 @@ export function Playground() {
                                         className="flex items-center p-2 space-x-3 text-gray-900 rounded hover:bg-gray-200 self-center"
                                         href="#">
                                         <TrashIcon className="ml-5 w-5 h-5" />
-                                        <span>Junk</span>
-                                        <Badge variant="secondary">23</Badge>
+                                        <span>Trash</span>
                                     </a>
                                 </TooltipTrigger>
                                 <TooltipContent>
-                                    <p className="text-sm text-gray-500">View all your junk messages</p>
+                                    <p className="text-sm text-gray-500">View all your trash messages</p>
                                 </TooltipContent>
                             </Tooltip>
                             <Tooltip>
@@ -95,12 +94,13 @@ export function Playground() {
                                     <a
                                         className="flex items-center p-2 space-x-3 text-gray-900 rounded hover:bg-gray-200 self-center"
                                         href="#">
-                                        <TrashIcon className="ml-5 w-5 h-5" />
-                                        <span>Trash</span>
+                                        <Mails className="ml-5 w-5 h-5" />
+                                        <span>Spam</span>
+                                        <Badge variant="secondary">23</Badge>
                                     </a>
                                 </TooltipTrigger>
                                 <TooltipContent>
-                                    <p className="text-sm text-gray-500">View all your trash messages</p>
+                                    <p className="text-sm text-gray-500">View all your junk messages</p>
                                 </TooltipContent>
                             </Tooltip>
                             <Tooltip>
