@@ -328,9 +328,9 @@ export function Playground() {
                                                         </Button>
                                                     </TooltipTrigger>
                                                 </PopoverTrigger>
-                                                <PopoverContent className="flex w-[559px] p-0">
+                                                <PopoverContent className="flex w-[559px] p-0 text-sm font-normal text-gray-500">
                                                     <div className="flex flex-col gap-2 border-r px-2 py-4">
-                                                        <div className="px-4 text-sm font-medium">Snooze until</div>
+                                                        <div className="px-4 text-sm font-normal text-gray-500">Snooze until</div>
                                                         <div className="grid min-w-[250px] gap-1">
                                                             <Button
                                                                 variant="ghost"
@@ -375,7 +375,7 @@ export function Playground() {
                                                     </div>
                                                 </PopoverContent>
                                             </Popover>
-                                            <TooltipContent>Snooze</TooltipContent>
+                                            <TooltipContent className="text-sm font-normal text-gray-500">Snooze</TooltipContent>
                                         </Tooltip>
 
                                     </div>
