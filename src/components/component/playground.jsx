@@ -81,46 +81,6 @@ export function Playground() {
                                     <a
                                         className="flex items-center p-2 space-x-3 text-gray-900 rounded hover:bg-gray-200 self-center"
                                         href="#">
-                                        <TrashIcon className="ml-5 w-5 h-5" />
-                                        <span>Trash</span>
-                                    </a>
-                                </TooltipTrigger>
-                                <TooltipContent>
-                                    <p className="text-sm text-gray-500">View all your trash messages</p>
-                                </TooltipContent>
-                            </Tooltip>
-                            <Tooltip>
-                                <TooltipTrigger asChild className="w-auto">
-                                    <a
-                                        className="flex items-center p-2 space-x-3 text-gray-900 rounded hover:bg-gray-200 self-center"
-                                        href="#">
-                                        <Mails className="ml-5 w-5 h-5" />
-                                        <span>Spam</span>
-                                        <Badge variant="secondary">23</Badge>
-                                    </a>
-                                </TooltipTrigger>
-                                <TooltipContent>
-                                    <p className="text-sm text-gray-500">View all your junk messages</p>
-                                </TooltipContent>
-                            </Tooltip>
-                            <Tooltip>
-                                <TooltipTrigger asChild className="w-auto">
-                                    <a
-                                        className="flex items-center p-2 space-x-3 text-gray-900 rounded hover:bg-gray-200 self-center"
-                                        href="#">
-                                        <ArchiveIcon className="ml-5 w-5 h-5" />
-                                        <span>Archive</span>
-                                    </a>
-                                </TooltipTrigger>
-                                <TooltipContent>
-                                    <p className="text-sm text-gray-500">View all your archived messages</p>
-                                </TooltipContent>
-                            </Tooltip>
-                            <Tooltip>
-                                <TooltipTrigger asChild className="w-auto">
-                                    <a
-                                        className="flex items-center p-2 space-x-3 text-gray-900 rounded hover:bg-gray-200 self-center"
-                                        href="#">
                                         <Users className="ml-5 w-5 h-5" />
                                         <span>Social</span>
                                         <Badge variant="secondary">972</Badge>
@@ -186,6 +146,47 @@ export function Playground() {
                                     <p className="text-sm text-gray-500">View all your promotion messages</p>
                                 </TooltipContent>
                             </Tooltip>
+                            <Tooltip>
+                                <TooltipTrigger asChild className="w-auto">
+                                    <a
+                                        className="flex items-center p-2 space-x-3 text-gray-900 rounded hover:bg-gray-200 self-center"
+                                        href="#">
+                                        <ArchiveIcon className="ml-5 w-5 h-5" />
+                                        <span>Archive</span>
+                                    </a>
+                                </TooltipTrigger>
+                                <TooltipContent>
+                                    <p className="text-sm text-gray-500">View all your archived messages</p>
+                                </TooltipContent>
+                            </Tooltip>
+                            <Tooltip>
+                                <TooltipTrigger asChild className="w-auto">
+                                    <a
+                                        className="flex items-center p-2 space-x-3 text-gray-900 rounded hover:bg-gray-200 self-center"
+                                        href="#">
+                                        <Mails className="ml-5 w-5 h-5" />
+                                        <span>Spam</span>
+                                        <Badge variant="secondary">23</Badge>
+                                    </a>
+                                </TooltipTrigger>
+                                <TooltipContent>
+                                    <p className="text-sm text-gray-500">View all your junk messages</p>
+                                </TooltipContent>
+                            </Tooltip>
+                            <Tooltip>
+                                <TooltipTrigger asChild className="w-auto">
+                                    <a
+                                        className="flex items-center p-2 space-x-3 text-gray-900 rounded hover:bg-gray-200 self-center"
+                                        href="#">
+                                        <TrashIcon className="ml-5 w-5 h-5" />
+                                        <span>Trash</span>
+                                    </a>
+                                </TooltipTrigger>
+                                <TooltipContent>
+                                    <p className="text-sm text-gray-500">View all your trash messages</p>
+                                </TooltipContent>
+                            </Tooltip>
+
                         </TooltipProvider>
                     </nav>
                 </aside>
