@@ -453,9 +453,9 @@ export function Playground() {
                                 <span className="text-sm text-gray-500">Oct 22, 2023, 9:00 AM</span>
                             </div>
 
-                            <div className="flex-1 h-[calc(100%-220px)] p-4 -mb-60"
+                            <div className="flex-1 h-[calc(100%-209px)] p-4 -mb-60"
                             >
-                                <ScrollArea className="h-[calc(100%-92px)] p-4 mb-2"
+                                <ScrollArea className="h-[calc(100%-92px)] p-4"
                                     rows={1}
                                 >
                                     <p>
@@ -475,9 +475,9 @@ export function Playground() {
                                     <p>Best regards, William</p>
                                 </ScrollArea>
 
-                                <Separator className="mb-2" />
+                                <Separator className="mb-4" />
 
-                                <Textarea className="max-h-16 w-full h-16 p-6 border-t mb-4" placeholder="Reply to William Smith">
+                                <Textarea className="max-h-16 w-full h-16 p-6 border-t mb-2" placeholder="Reply to William Smith">
                                 </Textarea>
                                 <div className="p-2 mr-2 flex">
                                     <Button className="ml-auto bg-black">
