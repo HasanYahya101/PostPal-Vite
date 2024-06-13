@@ -8,7 +8,7 @@ import {
     ResizablePanel,
     ResizablePanelGroup,
 } from "@/components/ui/resizable";
-import { Mail, Search } from "lucide-react";
+import { Mail, Search, Users } from "lucide-react";
 import {
     Tooltip,
     TooltipContent,
@@ -121,7 +121,7 @@ export function Playground() {
                                     <a
                                         className="flex items-center p-2 space-x-3 text-gray-900 rounded hover:bg-gray-200 self-center"
                                         href="#">
-                                        <FacebookIcon className="ml-5 w-5 h-5" />
+                                        <Users className="ml-5 w-5 h-5" />
                                         <span>Social</span>
                                         <Badge variant="secondary">972</Badge>
                                     </a>
