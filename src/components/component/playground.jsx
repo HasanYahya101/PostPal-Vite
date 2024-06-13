@@ -198,7 +198,7 @@ export function Playground() {
                                         <span className="ml-2 p-2">
                                             Inbox
                                         </span>
-                                        <div className="p-2 ml-1">
+                                        <div className="p-1 mt-0.5">
                                             <Badge variant="secondary">128</Badge>
                                         </div>
                                         <div className="ml-auto p-1">
