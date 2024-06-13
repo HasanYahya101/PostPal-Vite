@@ -192,6 +192,7 @@ export function Playground() {
                 </aside>
                 <main className="flex-1">
                     <div className="flex h-full">
+
                         <div className="w-1/2 border-r">
                             <Tabs defaultValue="all">
                                 <div className="justify-center">
@@ -247,13 +248,8 @@ export function Playground() {
                                     </div>
                                 </ScrollArea>
 
-
                             </Tabs>
-
-
                         </div>
-
-
 
                         <div className="w-1/2">
                             <div className="flex items-center p-4 space-x-4 border-b">
@@ -267,6 +263,8 @@ export function Playground() {
                                 </div>
                                 <span className="text-sm text-gray-500">Oct 22, 2023, 9:00 AM</span>
                             </div>
+
+
                             <ScrollArea className="h-[calc(100%-64px)] p-4">
                                 <p>
                                     Hi, let's have a meeting tomorrow to discuss the project. I've been reviewing the project details and
@@ -276,13 +274,14 @@ export function Playground() {
                                 <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
                                 <p>Best regards, William</p>
                             </ScrollArea>
+
                             <div className="flex items-center p-4 border-t">
                                 <Button variant="secondary">Mute this thread</Button>
                                 <Button className="ml-auto">Send</Button>
                             </div>
+
                         </div>
                     </div>
-
                 </main >
             </div >
         )
