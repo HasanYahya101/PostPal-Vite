@@ -29,6 +29,15 @@ import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
 
 export function Playground() {
 
@@ -263,49 +272,97 @@ export function Playground() {
 
                         <div className="w-1/2">
                             <div className="flex font-bold text-xl h-16 bg-white border-r border-b self-center">
-                                <div className="ml-auto flex items-center gap-2">
-                                    <TooltipProvider>
-                                        <Tooltip>
-                                            <TooltipTrigger asChild>
-                                                <Button variant="ghost" size="icon">
-                                                    <Reply className="h-4 w-4" />
-                                                    <span className="sr-only">Reply</span>
+                                <div className="flex items-center p-2">
+                                    <div className="flex items-center gap-2 ml-1">
+                                        <TooltipProvider>
+                                            <Tooltip>
+                                                <TooltipTrigger asChild>
+                                                    <Button variant="ghost" size="icon">
+                                                        <Archive className="h-4 w-4" />
+                                                        <span className="sr-only text-md font-normal">Archive</span>
+                                                    </Button>
+                                                </TooltipTrigger>
+                                                <TooltipContent className="text-sm font-normal text-gray-500">Archive</TooltipContent>
+                                            </Tooltip>
+                                            <Tooltip>
+                                                <TooltipTrigger asChild>
+                                                    <Button variant="ghost" size="icon">
+                                                        <ArchiveX className="h-4 w-4" />
+                                                        <span className="sr-only text-md font-normal">Move to spam folder</span>
+                                                    </Button>
+                                                </TooltipTrigger>
+                                                <TooltipContent className="text-sm font-normal text-gray-500">Move to spam folder</TooltipContent>
+                                            </Tooltip>
+                                            <Separator orientation="vertical" className="mx-1 h-6" />
+                                            <Tooltip>
+                                                <TooltipTrigger asChild>
+                                                    <Button variant="ghost" size="icon">
+                                                        <Trash2 className="h-4 w-4" />
+                                                        <span className="sr-only text-md font-normal">Move to trash</span>
+                                                    </Button>
+                                                </TooltipTrigger>
+                                                <TooltipContent className="text-sm font-normal text-gray-500">Move to trash</TooltipContent>
+                                            </Tooltip>
+                                        </TooltipProvider>
+                                    </div>
+                                    <div className="items-center flex gap-2">
+                                        <TooltipProvider>
+                                            <Tooltip>
+                                                <TooltipTrigger asChild>
+                                                    <Button variant="ghost" size="icon">
+                                                        <Reply className="h-4 w-4" />
+                                                        <span className="sr-only">Reply</span>
+                                                    </Button>
+                                                </TooltipTrigger>
+                                                <TooltipContent className="text-sm font-normal text-gray-500"
+                                                >
+                                                    Reply
+                                                </TooltipContent>
+                                            </Tooltip>
+                                            <Tooltip>
+                                                <TooltipTrigger asChild>
+                                                    <Button variant="ghost" size="icon">
+                                                        <ReplyAll className="h-4 w-4" />
+                                                        <span className="sr-only text-md font-normal">Reply all</span>
+                                                    </Button>
+                                                </TooltipTrigger>
+                                                <TooltipContent className="text-sm font-normal text-gray-500">Reply all</TooltipContent>
+                                            </Tooltip>
+                                            <Tooltip>
+                                                <TooltipTrigger asChild>
+                                                    <Button variant="ghost" size="icon">
+                                                        <Forward className="h-4 w-4" />
+                                                        <span className="sr-only text-md font-normal">Forward</span>
+                                                    </Button>
+                                                </TooltipTrigger>
+                                                <TooltipContent className="text-sm font-normal text-gray-500"
+                                                >Forward</TooltipContent>
+                                            </Tooltip>
+                                        </TooltipProvider>
+                                        <Separator orientation="vertical" className="mx-2 h-6" />
+                                        <DropdownMenu>
+                                            <DropdownMenuTrigger asChild>
+                                                <Button variant="ghost" size="icon" className="mr-3">
+                                                    <MoreVertical className="h-4 w-4" />
+                                                    <span className="sr-only">More</span>
                                                 </Button>
-                                            </TooltipTrigger>
-                                            <TooltipContent className="text-sm font-normal text-gray-500"
-                                            >
-                                                Reply
-                                            </TooltipContent>
-                                        </Tooltip>
-                                        <Tooltip>
-                                            <TooltipTrigger asChild>
-                                                <Button variant="ghost" size="icon">
-                                                    <ReplyAll className="h-4 w-4" />
-                                                    <span className="sr-only">Reply all</span>
-                                                </Button>
-                                            </TooltipTrigger>
-                                            <TooltipContent className="text-sm font-normal text-gray-500">Reply all</TooltipContent>
-                                        </Tooltip>
-                                        <Tooltip>
-                                            <TooltipTrigger asChild>
-                                                <Button variant="ghost" size="icon">
-                                                    <Forward className="h-4 w-4" />
-                                                    <span className="sr-only text-md font-normal">Forward</span>
-                                                </Button>
-                                            </TooltipTrigger>
-                                            <TooltipContent className="text-sm font-normal text-gray-500"
-                                            >Forward</TooltipContent>
-                                        </Tooltip>
-                                    </TooltipProvider>
-                                    <Separator orientation="vertical" className="mx-2 h-6" />
-
+                                            </DropdownMenuTrigger>
+                                            <DropdownMenuContent align="end">
+                                                <DropdownMenuItem>Mark as unread</DropdownMenuItem>
+                                                <DropdownMenuItem>Forward</DropdownMenuItem>
+                                                <DropdownMenuItem>Reply</DropdownMenuItem>
+                                                <DropdownMenuItem>Delete</DropdownMenuItem>
+                                            </DropdownMenuContent>
+                                        </DropdownMenu>
+                                    </div>
                                 </div>
                             </div>
 
                             <div className="flex items-center p-4 space-x-4 border-b">
                                 <Avatar>
                                     <AvatarImage alt="William Smith" src="/placeholder.svg?height=40&width=40" />
-                                    <AvatarFallback>WS</AvatarFallback>
+                                    <AvatarFallback className="bg-white border border-gray-200 text-gray-500"
+                                    >WS</AvatarFallback>
                                 </Avatar>
                                 <div className="flex-1 min-w-0">
                                     <span className="font-medium truncate">William Smith</span>
@@ -324,11 +381,6 @@ export function Playground() {
                                 <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
                                 <p>Best regards, William</p>
                             </ScrollArea>
-
-                            <div className="flex items-center p-4 border-t">
-                                <Button variant="secondary">Mute this thread</Button>
-                                <Button className="ml-auto">Send</Button>
-                            </div>
 
                         </div>
                     </div>
