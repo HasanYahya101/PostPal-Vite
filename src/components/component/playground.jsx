@@ -47,6 +47,7 @@ import {
     PopoverContent,
     PopoverTrigger,
 } from "@/components/ui/popover";
+import { Textarea } from "../ui/textarea";
 
 const today = new Date();
 
@@ -451,16 +452,26 @@ export function Playground() {
                                 <span className="text-sm text-gray-500">Oct 22, 2023, 9:00 AM</span>
                             </div>
 
+                            <div className="flex-1 h-[calc(100%-36vh)] p-4 -mb-60"
+                            >
+                                <ScrollArea className="h-[calc(100%-16vh)] p-4">
+                                    <p>
+                                        Hi, let's have a meeting tomorrow to discuss the project. I've been reviewing the project details and
+                                        have some ideas I'd like to share. It's crucial that we align on our next steps to ensure the project's
+                                        success.
+                                    </p>
+                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
+                                    <p>Best regards, William</p>
+                                </ScrollArea>
 
-                            <ScrollArea className="h-[calc(100%-64px)] p-4">
-                                <p>
-                                    Hi, let's have a meeting tomorrow to discuss the project. I've been reviewing the project details and
-                                    have some ideas I'd like to share. It's crucial that we align on our next steps to ensure the project's
-                                    success.
-                                </p>
-                                <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                <p>Best regards, William</p>
-                            </ScrollArea>
+                                <Textarea className="w-full h-16 p-6 border-t mb-4" placeholder="Reply to William Smith">
+                                </Textarea>
+                                <div className="p-2 mr-2 flex">
+                                    <Button className="ml-auto bg-black">
+                                        Send message
+                                    </Button>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
