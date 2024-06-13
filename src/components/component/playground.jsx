@@ -9,7 +9,7 @@ import {
     ResizablePanel,
     ResizablePanelGroup,
 } from "@/components/ui/resizable";
-import { Mail } from "lucide-react";
+import { Mail, Search } from "lucide-react";
 import {
     Tooltip,
     TooltipContent,
@@ -199,8 +199,11 @@ export function Playground() {
                                     <Badge variant="secondary" className="p-2 ml-2 rounded-full">128</Badge>
                                 </div>
                             </div>
-                            <div className="p-4 h-16 border-black">
-                                <Input placeholder="Search" />
+                            <div className="p-4 h-14">
+                                <div className="relative">
+                                    <Search className="ml-0.5 absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                                    <Input placeholder="Search" className="pl-8" />
+                                </div>
                             </div>
                             <ScrollArea className="h-[calc(100%-64px)]">
                                 <div className="flex flex-col" />
