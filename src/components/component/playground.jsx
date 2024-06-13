@@ -28,7 +28,7 @@ export function Playground() {
                 <aside className="w-64 border-r bg-white">
                     <div className="flex items-center justify-center h-16 border-b self-center">
                         <Mail className="w-8 h-8 text-blue-500" />
-                        <h1 className=" ml-4 text-lg font-semibold mr-2">
+                        <h1 className=" ml-4 text-lg font-semibold mr-2 truncate max-w-[10ch]">
                             Alicia Koch</h1>
                     </div>
                     <nav className="p-2">
