@@ -8,7 +8,17 @@ import {
     ResizablePanel,
     ResizablePanelGroup,
 } from "@/components/ui/resizable";
-import { Mail, Search, Users, Mails } from "lucide-react";
+import {
+    Mail, Search, Users, Mails,
+    Archive,
+    ArchiveX,
+    Clock,
+    Forward,
+    MoreVertical,
+    Reply,
+    ReplyAll,
+    Trash2,
+} from "lucide-react";
 import {
     Tooltip,
     TooltipContent,
@@ -18,6 +28,7 @@ import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Separator } from "@/components/ui/separator";
 
 export function Playground() {
 
@@ -202,7 +213,7 @@ export function Playground() {
                                         <div className="p-1 mt-0.5">
                                             <Badge variant="secondary">128</Badge>
                                         </div>
-                                        <div className="ml-auto p-1">
+                                        <div className="ml-auto p-1 mr-2">
                                             <TabsList className="ml-4"
                                             >
                                                 <TabsTrigger
@@ -252,12 +263,42 @@ export function Playground() {
 
                         <div className="w-1/2">
                             <div className="flex font-bold text-xl h-16 bg-white border-r border-b self-center">
-                                <span className="ml-2 p-4">
-                                    Subject of the email
-                                </span>
-                                <div className="ml-auto p-2">
-                                    <Button variant="secondary">Reply</Button>
-                                    <Button className="ml-2">Forward</Button>
+                                <div className="ml-auto flex items-center gap-2">
+                                    <TooltipProvider>
+                                        <Tooltip>
+                                            <TooltipTrigger asChild>
+                                                <Button variant="ghost" size="icon">
+                                                    <Reply className="h-4 w-4" />
+                                                    <span className="sr-only">Reply</span>
+                                                </Button>
+                                            </TooltipTrigger>
+                                            <TooltipContent className="text-sm font-normal text-gray-500"
+                                            >
+                                                Reply
+                                            </TooltipContent>
+                                        </Tooltip>
+                                        <Tooltip>
+                                            <TooltipTrigger asChild>
+                                                <Button variant="ghost" size="icon">
+                                                    <ReplyAll className="h-4 w-4" />
+                                                    <span className="sr-only">Reply all</span>
+                                                </Button>
+                                            </TooltipTrigger>
+                                            <TooltipContent className="text-sm font-normal text-gray-500">Reply all</TooltipContent>
+                                        </Tooltip>
+                                        <Tooltip>
+                                            <TooltipTrigger asChild>
+                                                <Button variant="ghost" size="icon">
+                                                    <Forward className="h-4 w-4" />
+                                                    <span className="sr-only text-md font-normal">Forward</span>
+                                                </Button>
+                                            </TooltipTrigger>
+                                            <TooltipContent className="text-sm font-normal text-gray-500"
+                                            >Forward</TooltipContent>
+                                        </Tooltip>
+                                    </TooltipProvider>
+                                    <Separator orientation="vertical" className="mx-2 h-6" />
+
                                 </div>
                             </div>
 
