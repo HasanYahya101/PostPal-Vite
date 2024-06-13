@@ -228,7 +228,7 @@ export function Playground() {
                 </aside>
                 <main className="flex-1">
                     <div className="flex h-full">
-                        <div className="w-[38%] border-r">
+                        <div className="w-[39%] border-r">
                             <Tabs defaultValue="all">
                                 <div className="justify-center">
                                     <div className="flex p-2 font-bold text-xl h-16 bg-white border-r border-b border-l self-center">
@@ -286,7 +286,7 @@ export function Playground() {
                             </Tabs>
                         </div>
 
-                        <div className="w-[62%] min-w-[480px] border-r">
+                        <div className="w-[61%] min-w-[480px] border-r">
                             <div className="flex font-bold text-xl h-16 bg-white border-r border-b self-center">
                                 <TooltipProvider className="flex">
                                     <div className="mr-auto flex items-center gap-2 ml-4">
