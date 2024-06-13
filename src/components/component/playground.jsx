@@ -191,7 +191,14 @@ export function Playground() {
                 <main className="flex-1">
                     <div className="flex h-full">
                         <div className="w-1/2 border-r">
-                            <div className="p-4">
+                            <div className="justify-center">
+                                <div className="flex p-4 font-bold text-xl h-16 bg-white border-r border-b border-l">
+                                    <span className="ml-2">
+                                        Inbox
+                                    </span>
+                                </div>
+                            </div>
+                            <div className="p-4 h-16 border-black">
                                 <Input placeholder="Search" />
                             </div>
                             <ScrollArea className="h-[calc(100%-64px)]">
