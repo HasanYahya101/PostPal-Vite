@@ -459,11 +459,6 @@ export function Playground() {
                                 <p>Best regards, William</p>
                             </ScrollArea>
 
-                            <div className="flex items-center p-4 border-t">
-                                <Button variant="secondary">Mute this thread</Button>
-                                <Button className="ml-auto">Send</Button>
-                            </div>
-
                         </div>
                     </div>
                 </main >
