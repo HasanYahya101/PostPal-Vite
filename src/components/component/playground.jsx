@@ -325,10 +325,10 @@ export function Playground() {
                                 </div>
                             </div>
 
-                            <div className="flex items-center p-4 space-x-4 border-b">
+                            <div className="flex items-center p-5 space-x-4 border-b">
                                 <Avatar>
                                     <AvatarImage alt="William Smith" src="/placeholder.svg?height=40&width=40" />
-                                    <AvatarFallback>WS</AvatarFallback>
+                                    <AvatarFallback className="bg-white border border-gray-200 text-gray-500">WS</AvatarFallback>
                                 </Avatar>
                                 <div className="flex-1 min-w-0">
                                     <span className="font-medium truncate">William Smith</span>
