@@ -191,29 +191,30 @@ export function Playground() {
                 </aside>
                 <main className="flex-1">
                     <div className="flex h-full">
-
                         <div className="w-1/2 border-r">
-                            <Tabs defaultValue="all" className="">
+                            <Tabs defaultValue="all">
                                 <div className="justify-center">
                                     <div className="flex p-4 font-bold text-xl h-16 bg-white border-r border-b border-l">
                                         <span className="ml-2">
                                             Inbox
                                         </span>
                                         <Badge variant="secondary" className="p-2 ml-2 rounded-full">128</Badge>
-                                        <TabsList className="ml-auto">
-                                            <TabsTrigger
-                                                value="all"
-                                                className="text-zinc-600 dark:text-zinc-200"
-                                            >
-                                                All mail
-                                            </TabsTrigger>
-                                            <TabsTrigger
-                                                value="unread"
-                                                className="text-zinc-600 dark:text-zinc-200"
-                                            >
-                                                Unread
-                                            </TabsTrigger>
-                                        </TabsList>
+                                        <div className="flex ml-auto gap-8">
+                                            <TabsList className="ml-4">
+                                                <TabsTrigger
+                                                    value="all"
+                                                    className="text-zinc-600 dark:text-zinc-200"
+                                                >
+                                                    All mail
+                                                </TabsTrigger>
+                                                <TabsTrigger
+                                                    value="unread"
+                                                    className="text-zinc-600 dark:text-zinc-200"
+                                                >
+                                                    Unread
+                                                </TabsTrigger>
+                                            </TabsList>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="p-4 h-14">
