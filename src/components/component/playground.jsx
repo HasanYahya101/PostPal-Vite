@@ -265,9 +265,9 @@ export function Playground() {
                                         <Input placeholder="Search" className="pl-8" />
                                     </div>
                                 </div>
-                                <TabsContent value="all">
+                                <TabsContent value="all" className="max-h-[calc(100%-300px)] overflow-hidden"
+                                >
                                     <ScrollArea className="h-[calc(100%-200px)] mt-3"
-                                        rows={1}
                                     >
                                         {/*<div key={index} className="flex p-4 space-x-4 border-b hover:bg-gray-50">*/}
                                         <div className="flex flex-col mt-1 mb-1">
