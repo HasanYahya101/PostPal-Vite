@@ -269,7 +269,6 @@ export function Playground() {
                                 <TabsContent value="all">
 
                                     <ScrollArea className="h-[calc(100%-30px)] border mt-4 mb-auto" rows={1}
-                                        style={{ height: 'calc(100% - 30px)' }}
                                     >
 
                                         {/*<div key={index} className="flex p-4 space-x-4 border-b hover:bg-gray-50">*/}
