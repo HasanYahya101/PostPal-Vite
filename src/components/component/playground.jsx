@@ -60,6 +60,8 @@ const nextSaturday = (date) => {
 
 export function Playground() {
     const [height, setHeight] = useState(0);
+    const [bottonMargin, setBottonMargin] = useState(0);
+    const [navHeight, setNavHeight] = useState(0);
 
     const calculateHeight = () => {
         const viewportHeight = window.innerHeight;
@@ -69,6 +71,46 @@ export function Playground() {
 
         setHeight(calculatedHeight);
     };
+
+    const calculateHeightMarginButton = () => {
+        const viewportHeight = window.innerHeight;
+
+        const topBarHeight = 30;
+        const calculatedHeight = viewportHeight - topBarHeight - 450;
+
+        setBottonMargin(calculatedHeight);
+    };
+
+    const calculateHeightNav = () => {
+        const viewportHeight = window.innerHeight;
+
+        const topBarHeight = 30;
+        const calculatedHeight = viewportHeight - topBarHeight - 230;
+
+        setNavHeight(calculatedHeight);
+    };
+
+    useEffect(() => {
+        // Calculate height on mount
+        calculateHeightNav();
+
+        // Add resize event listener to recalculate height on window resize
+        window.addEventListener('resize', calculateHeightNav);
+
+        // Cleanup event listener on component unmount
+        return () => window.removeEventListener('resize', calculateHeightNav);
+    }, []);
+
+    useEffect(() => {
+        // Calculate height on mount
+        calculateHeightMarginButton();
+
+        // Add resize event listener to recalculate height on window resize
+        window.addEventListener('resize', calculateHeightMarginButton);
+
+        // Cleanup event listener on component unmount
+        return () => window.removeEventListener('resize', calculateHeightMarginButton);
+    }, []);
 
     useEffect(() => {
         // Calculate height on mount
@@ -93,8 +135,10 @@ export function Playground() {
                             Alicia Koch
                         </h1>
                     </div>
-                    <nav className="p-2">
-                        <ScrollArea className="h-100vh">
+                    <nav className="p-2 flex-grow">
+                        <ScrollArea className="h-[calc(100%-60px)]"
+                            style={{ height: `${navHeight}px` }}
+                        >
                             <TooltipProvider>
                                 <Tooltip>
                                     <TooltipTrigger asChild className="w-auto">
@@ -210,16 +254,12 @@ export function Playground() {
                             </TooltipProvider>
                         </ScrollArea>
                     </nav>
-                    <div className="flex flex-col">
-                        <div className="mt-auto">
-                            <div className="mt-auto p-4 flex justify-center self-end">
-                                <Button variant="outline" className="w-full mt-auto">
-                                    <div className="flex items-center">
-                                        <span>Settings & Profile</span>
-                                    </div>
-                                </Button>
-                            </div>
-                        </div>
+
+                    <div className="p-4 self-end justify-end mt-[calc(100%-152px)]"
+                    >{/*style={{ marginTop: `${bottonMargin}px` }}*/}
+                        <Button variant="outline" className="w-full">
+                            <span>Settings & Profile</span>
+                        </Button>
                     </div>
                 </aside>
                 <main className="flex-1">
