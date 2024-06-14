@@ -275,18 +275,23 @@ export function Playground() {
                                                 >U</AvatarFallback>
                                             </Avatar>
                                             <div className="flex flex-col flex-1 min-w-0">
-                                                <span className="font-medium truncate">Name Surname</span>
+                                                <div className="flex">
+                                                    <span className="font-medium truncate">Name Surname</span>
+                                                    <div className="flex ml-auto mb-1">
+                                                        <TooltipProvider>
+                                                            <Tooltip>
+                                                                <TooltipTrigger asChild>
+                                                                    <span className="text-sm text-gray-500 whitespace-nowrap self-end">8 months ago</span>
+                                                                </TooltipTrigger>
+                                                                <TooltipContent className="text-sm font-normal text-gray-500">Sent on 2023-01-01 at 8:00 PM</TooltipContent>
+                                                            </Tooltip>
+                                                        </TooltipProvider>
+                                                    </div>
+                                                </div>
                                                 <span className="text-sm text-gray-500 truncate">Subject of the email</span>
                                                 <span className="text-sm text-gray-500 truncate">Preview of the email content...</span>
                                             </div>
-                                            <TooltipProvider>
-                                                <Tooltip>
-                                                    <TooltipTrigger asChild>
-                                                        <span className="text-sm text-gray-500 whitespace-nowrap">8 months ago</span>
-                                                    </TooltipTrigger>
-                                                    <TooltipContent className="text-sm font-normal text-gray-500">Sent on 2023-01-01 at 8:00 PM</TooltipContent>
-                                                </Tooltip>
-                                            </TooltipProvider>
+
                                             {/*</div>*/}
                                         </div>
                                     </div>
