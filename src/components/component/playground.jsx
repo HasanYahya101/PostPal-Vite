@@ -84,7 +84,8 @@ export function Playground() {
     return (
         (
             <div className="flex h-screen bg-gray-100 border-b">
-                <aside className="w-64 min-w-[224px] border-r bg-white">
+                <aside className="w-64 min-w-[224px] border-r bg-white"
+                >
                     <div className="flex items-center justify-center h-16 border-b self-center">
                         <Mail className="w-8 h-8 text-blue-500" />
                         <h1 className=" ml-4 text-lg font-semibold mr-2 truncate max-w-[10ch]">
@@ -289,7 +290,7 @@ export function Playground() {
 
                                 <TabsContent value="all">
 
-                                    <ScrollArea className="border mt-4 mb-auto" rows={1}
+                                    <ScrollArea className="border mt-4 mb-auto flex-1" rows={1}
                                         style={{ height: `${height}px` }}
                                     >
 
