@@ -289,7 +289,7 @@ export function Playground() {
 
 
                                         {Array(10).fill().map((_, index) => (
-                                            <div className="flex p-4 space-x-4 border-b hover:bg-gray-50">
+                                            <div className="flex p-4 space-x-4 border-b hover:bg-gray-50 cursor-pointer">
                                                 <Avatar>
                                                     <AvatarImage src="/placeholder-user.jpg" />
                                                     <AvatarFallback className="bg-white border border-gray-200 text-gray-500"
@@ -499,166 +499,14 @@ export function Playground() {
                                         have some ideas I'd like to share. It's crucial that we align on our next steps to ensure the project's
                                         success.
                                     </p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
-                                    <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
-                                    <p>Best regards, William</p>
+                                    {Array(20).fill().map((_, index) => (
+                                        <p key={index}>
+                                            <p>Please come prepared with any questions or insights you may have. Looking forward to our meeting!</p>
+                                            <p>Best regards, William</p>
+                                        </p>
+                                    ))}
+
+
                                 </ScrollArea>
 
                                 <Separator className="mb-4" />
