@@ -60,7 +60,6 @@ const nextSaturday = (date) => {
 
 export function Playground() {
     const [height, setHeight] = useState(0);
-    const [bottonMargin, setBottonMargin] = useState(0);
     const [navHeight, setNavHeight] = useState(0);
 
     const calculateHeight = () => {
