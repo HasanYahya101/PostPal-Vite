@@ -288,32 +288,61 @@ export function Playground() {
                                         {/*<div key={index} className="flex p-4 space-x-4 border-b hover:bg-gray-50">*/}
 
 
-                                        {Array(10).fill().map((_, index) => (
-                                            <div className="flex p-4 space-x-4 border-b hover:bg-gray-50 cursor-pointer">
-                                                <Avatar>
-                                                    <AvatarImage src="/placeholder-user.jpg" />
-                                                    <AvatarFallback className="bg-white border border-gray-200 text-gray-500"
-                                                    >U</AvatarFallback>
-                                                </Avatar>
-                                                <div className="flex flex-col flex-1 min-w-10">
-                                                    <div className="flex">
-                                                        <span className="font-medium truncate">Name Surname</span>
-                                                        <div className="flex ml-auto mb-1">
-                                                            <TooltipProvider>
-                                                                <Tooltip>
-                                                                    <TooltipTrigger asChild>
-                                                                        <span className="text-sm text-gray-500 whitespace-nowrap self-end">8 months ago</span>
-                                                                    </TooltipTrigger>
-                                                                    <TooltipContent className="text-sm font-normal text-gray-500">Sent on 2023-01-01 at 8:00 PM</TooltipContent>
-                                                                </Tooltip>
-                                                            </TooltipProvider>
+                                        {Array(6).fill().map((_, index) => (
+                                            <div>
+                                                <div className="flex p-4 space-x-4 border-b hover:bg-gray-50 cursor-pointer">
+                                                    <Avatar>
+                                                        <AvatarImage src="/placeholder-user.jpg" />
+                                                        <AvatarFallback className="bg-white border border-gray-200 text-gray-500"
+                                                        >U</AvatarFallback>
+                                                    </Avatar>
+                                                    <div className="flex flex-col flex-1 min-w-10">
+                                                        <div className="flex">
+                                                            <span className="font-medium truncate">Name Surname</span>
+                                                            <div className="flex ml-auto mb-1">
+                                                                <TooltipProvider>
+                                                                    <Tooltip>
+                                                                        <TooltipTrigger asChild>
+                                                                            <span className="text-sm text-gray-500 whitespace-nowrap self-end">8 months ago</span>
+                                                                        </TooltipTrigger>
+                                                                        <TooltipContent className="text-sm font-normal text-gray-500">Sent on 2023-01-01 at 8:00 PM</TooltipContent>
+                                                                    </Tooltip>
+                                                                </TooltipProvider>
+                                                            </div>
                                                         </div>
+                                                        <span className="text-sm text-gray-500 truncate">Subject of the email</span>
+                                                        <span className="text-sm text-gray-500 truncate">Preview of the email content...</span>
                                                     </div>
-                                                    <span className="text-sm text-gray-500 truncate">Subject of the email</span>
-                                                    <span className="text-sm text-gray-500 truncate">Preview of the email content...</span>
-                                                </div>
 
-                                                {/*</div>*/}
+                                                    {/*</div>*/}
+                                                </div>
+                                                <div className="flex p-4 space-x-4 border-b hover:bg-gray-50 cursor-pointer">
+                                                    <Avatar>
+                                                        <AvatarImage src="/placeholder-user.jpg" />
+                                                        <AvatarFallback className="bg-white border border-gray-200 text-gray-500"
+                                                        >U</AvatarFallback>
+                                                    </Avatar>
+                                                    <div className="flex flex-col flex-1 min-w-10">
+                                                        <div className="flex">
+                                                            <span className="font-medium truncate">Name Surname</span>
+                                                            <span className="w-2 h-2 bg-blue-500 rounded-full ml-2 mt-[9px] p-1"></span>
+                                                            <div className="flex ml-auto mb-1">
+                                                                <TooltipProvider>
+                                                                    <Tooltip>
+                                                                        <TooltipTrigger asChild>
+                                                                            <span className="text-sm text-gray-500 whitespace-nowrap self-end">8 months ago</span>
+                                                                        </TooltipTrigger>
+                                                                        <TooltipContent className="text-sm font-normal text-gray-500">Sent on 2023-01-01 at 8:00 PM</TooltipContent>
+                                                                    </Tooltip>
+                                                                </TooltipProvider>
+                                                            </div>
+                                                        </div>
+                                                        <span className="text-sm text-gray-500 truncate">Subject of the email</span>
+                                                        <span className="text-sm text-gray-500 truncate">Preview of the email content...</span>
+                                                    </div>
+
+                                                    {/*</div>*/}
+                                                </div>
                                             </div>
                                         ))}
 
