@@ -19,6 +19,7 @@ import {
     ReplyAll,
     Trash2,
     Space,
+    Settings,
 } from "lucide-react";
 import {
     Tooltip,
@@ -93,162 +94,133 @@ export function Playground() {
                         </h1>
                     </div>
                     <nav className="p-2">
-                        <TooltipProvider>
-                            <Tooltip>
-                                <TooltipTrigger asChild className="w-auto">
-                                    <a
-                                        className="flex items-center p-2 space-x-3 text-gray-900 rounded hover:bg-gray-200 self-center"
-                                        href="#">
-                                        <InboxIcon className="ml-5 w-5 h-5" />
-                                        <span>Inbox</span>
-                                        <Badge variant="secondary">128</Badge>
-                                    </a>
-                                </TooltipTrigger>
-                                <TooltipContent>
-                                    <p className="text-sm text-gray-500">View all your messages</p>
-                                </TooltipContent>
-                            </Tooltip>
-                            <Tooltip>
-                                <TooltipTrigger asChild className="w-auto">
-                                    <a
-                                        className="flex items-center p-2 space-x-3 text-gray-900 rounded hover:bg-gray-200 self-center"
-                                        href="#">
+                        <ScrollArea className="h-100vh">
+                            <TooltipProvider>
+                                <Tooltip>
+                                    <TooltipTrigger asChild className="w-auto">
+                                        <a
+                                            className="flex items-center p-2 space-x-3 text-gray-900 rounded hover:bg-gray-200 self-center"
+                                            href="#">
+                                            <InboxIcon className="ml-5 w-5 h-5" />
+                                            <span>Inbox</span>
+                                            <Badge variant="secondary">128</Badge>
+                                        </a>
+                                    </TooltipTrigger>
+                                    <TooltipContent>
+                                        <p className="text-sm text-gray-500">View all your messages</p>
+                                    </TooltipContent>
+                                </Tooltip>
+                                <Tooltip>
+                                    <TooltipTrigger asChild className="w-auto">
+                                        <a
+                                            className="flex items-center p-2 space-x-3 text-gray-900 rounded hover:bg-gray-200 self-center"
+                                            href="#">
 
-                                        <DraftingCompassIcon className="ml-5 w-5 h-5" />
-                                        <span>Drafts</span>
-                                        <Badge variant="secondary">9</Badge>
-                                    </a>
-                                </TooltipTrigger>
-                                <TooltipContent>
-                                    <p className="text-sm text-gray-500">View all your drafts</p>
-                                </TooltipContent>
-                            </Tooltip>
-                            <Tooltip>
-                                <TooltipTrigger asChild className="w-auto">
-                                    <a
-                                        className="flex items-center p-2 space-x-3 text-gray-900 rounded hover:bg-gray-200 self-center"
-                                        href="#">
-                                        <SendIcon className="ml-5 w-5 h-5" />
-                                        <span>Sent</span>
-                                    </a>
-                                </TooltipTrigger>
-                                <TooltipContent>
-                                    <p className="text-sm text-gray-500">View all your sent messages</p>
-                                </TooltipContent>
-                            </Tooltip>
-                            <Tooltip>
-                                <TooltipTrigger asChild className="w-auto">
-                                    <a
-                                        className="flex items-center p-2 space-x-3 text-gray-900 rounded hover:bg-gray-200 self-center"
-                                        href="#">
-                                        <Users className="ml-5 w-5 h-5" />
-                                        <span>Social</span>
-                                        <Badge variant="secondary">972</Badge>
-                                    </a>
-                                </TooltipTrigger>
-                                <TooltipContent>
-                                    <p className="text-sm text-gray-500">View all your social messages</p>
-                                </TooltipContent>
-                            </Tooltip>
-                            <Tooltip>
-                                <TooltipTrigger asChild className="w-auto">
-                                    <a
-                                        className="flex items-center p-2 space-x-3 text-gray-900 rounded hover:bg-gray-200 self-center"
-                                        href="#">
-                                        <InfoIcon className="ml-5 w-5 h-5" />
-                                        <span>Updates</span>
-                                        <Badge variant="secondary">342</Badge>
-                                    </a>
-                                </TooltipTrigger>
-                                <TooltipContent>
-                                    <p className="text-sm text-gray-500">View all your updates</p>
-                                </TooltipContent>
-                            </Tooltip>
-                            <Tooltip>
-                                <TooltipTrigger asChild className="w-auto">
-                                    <a
-                                        className="flex items-center p-2 space-x-3 text-gray-900 rounded hover:bg-gray-200 self-center"
-                                        href="#">
-                                        <FilesIcon className="ml-5 w-5 h-5" />
-                                        <span>Forums</span>
-                                        <Badge variant="secondary">128</Badge>
-                                    </a>
-                                </TooltipTrigger>
-                                <TooltipContent>
-                                    <p className="text-sm text-gray-500">View all your forum messages</p>
-                                </TooltipContent>
-                            </Tooltip>
-                            <Tooltip>
-                                <TooltipTrigger asChild className="w-auto">
-                                    <a
-                                        className="flex items-center p-2 space-x-3 text-gray-900 rounded hover:bg-gray-200 self-center"
-                                        href="#">
-                                        <ShoppingCartIcon className="ml-5 w-5 h-5" />
-                                        <span>Shopping</span>
-                                        <Badge variant="secondary">8</Badge>
-                                    </a>
-                                </TooltipTrigger>
-                                <TooltipContent>
-                                    <p className="text-sm text-gray-500">View all your shopping messages</p>
-                                </TooltipContent>
-                            </Tooltip>
-                            <Tooltip>
-                                <TooltipTrigger asChild className="w-auto">
-                                    <a
-                                        className="flex items-center p-2 space-x-3 text-gray-900 rounded hover:bg-gray-200 self-center"
-                                        href="#">
-                                        <PresentationIcon className="ml-5 w-5 h-5" />
-                                        <span>Promotions</span>
-                                        <Badge variant="secondary" className="justify-end">21</Badge>
-                                    </a>
-                                </TooltipTrigger>
-                                <TooltipContent>
-                                    <p className="text-sm text-gray-500">View all your promotion messages</p>
-                                </TooltipContent>
-                            </Tooltip>
-                            <Tooltip>
-                                <TooltipTrigger asChild className="w-auto">
-                                    <a
-                                        className="flex items-center p-2 space-x-3 text-gray-900 rounded hover:bg-gray-200 self-center"
-                                        href="#">
-                                        <ArchiveIcon className="ml-5 w-5 h-5" />
-                                        <span>Archive</span>
-                                    </a>
-                                </TooltipTrigger>
-                                <TooltipContent>
-                                    <p className="text-sm text-gray-500">View all your archived messages</p>
-                                </TooltipContent>
-                            </Tooltip>
-                            <Tooltip>
-                                <TooltipTrigger asChild className="w-auto">
-                                    <a
-                                        className="flex items-center p-2 space-x-3 text-gray-900 rounded hover:bg-gray-200 self-center"
-                                        href="#">
-                                        <Mails className="ml-5 w-5 h-5" />
-                                        <span>Spam</span>
-                                        <Badge variant="secondary">23</Badge>
-                                    </a>
-                                </TooltipTrigger>
-                                <TooltipContent>
-                                    <p className="text-sm text-gray-500">View all your junk messages</p>
-                                </TooltipContent>
-                            </Tooltip>
-                            <Tooltip>
-                                <TooltipTrigger asChild className="w-auto">
-                                    <a
-                                        className="flex items-center p-2 space-x-3 text-gray-900 rounded hover:bg-gray-200 self-center"
-                                        href="#">
-                                        <TrashIcon className="ml-5 w-5 h-5" />
-                                        <span>Trash</span>
-                                    </a>
-                                </TooltipTrigger>
-                                <TooltipContent>
-                                    <p className="text-sm text-gray-500">View all your trash messages</p>
-                                </TooltipContent>
-                            </Tooltip>
+                                            <DraftingCompassIcon className="ml-5 w-5 h-5" />
+                                            <span>Drafts</span>
+                                            <Badge variant="secondary">9</Badge>
+                                        </a>
+                                    </TooltipTrigger>
+                                    <TooltipContent>
+                                        <p className="text-sm text-gray-500">View all your drafts</p>
+                                    </TooltipContent>
+                                </Tooltip>
+                                <Tooltip>
+                                    <TooltipTrigger asChild className="w-auto">
+                                        <a
+                                            className="flex items-center p-2 space-x-3 text-gray-900 rounded hover:bg-gray-200 self-center"
+                                            href="#">
+                                            <SendIcon className="ml-5 w-5 h-5" />
+                                            <span>Sent</span>
+                                        </a>
+                                    </TooltipTrigger>
+                                    <TooltipContent>
+                                        <p className="text-sm text-gray-500">View all your sent messages</p>
+                                    </TooltipContent>
+                                </Tooltip>
+                                <Tooltip>
+                                    <TooltipTrigger asChild className="w-auto">
+                                        <a
+                                            className="flex items-center p-2 space-x-3 text-gray-900 rounded hover:bg-gray-200 self-center"
+                                            href="#">
+                                            <Users className="ml-5 w-5 h-5" />
+                                            <span>Social</span>
+                                            <Badge variant="secondary">972</Badge>
+                                        </a>
+                                    </TooltipTrigger>
+                                    <TooltipContent>
+                                        <p className="text-sm text-gray-500">View all your social messages</p>
+                                    </TooltipContent>
+                                </Tooltip>
+                                <Tooltip>
+                                    <TooltipTrigger asChild className="w-auto">
+                                        <a
+                                            className="flex items-center p-2 space-x-3 text-gray-900 rounded hover:bg-gray-200 self-center"
+                                            href="#">
+                                            <InfoIcon className="ml-5 w-5 h-5" />
+                                            <span>Updates</span>
+                                            <Badge variant="secondary">342</Badge>
+                                        </a>
+                                    </TooltipTrigger>
+                                    <TooltipContent>
+                                        <p className="text-sm text-gray-500">View all your updates</p>
+                                    </TooltipContent>
+                                </Tooltip>
+                                <Tooltip>
+                                    <TooltipTrigger asChild className="w-auto">
+                                        <a
+                                            className="flex items-center p-2 space-x-3 text-gray-900 rounded hover:bg-gray-200 self-center"
+                                            href="#">
+                                            <ArchiveIcon className="ml-5 w-5 h-5" />
+                                            <span>Archive</span>
+                                        </a>
+                                    </TooltipTrigger>
+                                    <TooltipContent>
+                                        <p className="text-sm text-gray-500">View all your archived messages</p>
+                                    </TooltipContent>
+                                </Tooltip>
+                                <Tooltip>
+                                    <TooltipTrigger asChild className="w-auto">
+                                        <a
+                                            className="flex items-center p-2 space-x-3 text-gray-900 rounded hover:bg-gray-200 self-center"
+                                            href="#">
+                                            <Mails className="ml-5 w-5 h-5" />
+                                            <span>Spam</span>
+                                            <Badge variant="secondary">23</Badge>
+                                        </a>
+                                    </TooltipTrigger>
+                                    <TooltipContent>
+                                        <p className="text-sm text-gray-500">View all your junk messages</p>
+                                    </TooltipContent>
+                                </Tooltip>
+                                <Tooltip>
+                                    <TooltipTrigger asChild className="w-auto">
+                                        <a
+                                            className="flex items-center p-2 space-x-3 text-gray-900 rounded hover:bg-gray-200 self-center"
+                                            href="#">
+                                            <TrashIcon className="ml-5 w-5 h-5" />
+                                            <span>Trash</span>
+                                        </a>
+                                    </TooltipTrigger>
+                                    <TooltipContent>
+                                        <p className="text-sm text-gray-500">View all your trash messages</p>
+                                    </TooltipContent>
+                                </Tooltip>
 
-                        </TooltipProvider>
+                            </TooltipProvider>
+                        </ScrollArea>
                     </nav>
+                    <div className="flex flex-col">
+                        <div className="mt-auto">
+                            <div className="mt-auto p-4 flex justify-center self-end">
+                                <Button variant="outline" className="w-full mt-auto">
+                                    <div className="flex items-center">
+                                        <span>Settings & Profile</span>
+                                    </div>
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
                 </aside>
                 <main className="flex-1">
                     <div className="flex h-full">
