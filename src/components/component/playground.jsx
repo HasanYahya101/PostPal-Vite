@@ -282,7 +282,7 @@ export function Playground() {
                                             <TooltipProvider>
                                                 <Tooltip>
                                                     <TooltipTrigger asChild>
-                                                        <span className="text-sm text-gray-500 truncate">8 months ago</span>
+                                                        <span className="text-sm text-gray-500 whitespace-nowrap">8 months ago</span>
                                                     </TooltipTrigger>
                                                     <TooltipContent className="text-sm font-normal text-gray-500">Sent on 2023-01-01 at 8:00 PM</TooltipContent>
                                                 </Tooltip>
