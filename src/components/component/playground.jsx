@@ -265,10 +265,10 @@ export function Playground() {
                                         <Input placeholder="Search" className="pl-8" />
                                     </div>
                                 </div>
-                                <ScrollArea className="h-[calc(100%-64px)] border mt-4">
+                                <ScrollArea className="h-[calc(100%-64px)] mt-4">
                                     {/*<div key={index} className="flex p-4 space-x-4 border-b hover:bg-gray-50">*/}
                                     <div className="flex flex-col">
-                                        <div className="flex p-4 space-x-4 border-b hover:bg-gray-50">
+                                        <div className="flex p-4 space-x-4 border rounded-md hover:bg-gray-50 bg-slate-100 mr-2 ml-2">
                                             <Avatar>
                                                 <AvatarImage src="/placeholder-user.jpg" />
                                                 <AvatarFallback className="bg-white border border-gray-200 text-gray-500"
