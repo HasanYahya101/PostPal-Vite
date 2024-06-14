@@ -231,7 +231,7 @@ export function Playground() {
                 <main className="flex-1">
                     <div className="flex h-full">
                         <div className="w-[39%] border-r">
-                            <Tabs defaultValue="all">
+                            <Tabs className="h-auto" defaultValue="all">
                                 <div className="justify-center">
                                     <div className="flex p-2 font-bold text-xl h-16 bg-white border-r border-b border-l self-center">
                                         <span className="ml-2 p-2">
@@ -265,23 +265,24 @@ export function Playground() {
                                         <Input placeholder="Search" className="pl-8" />
                                     </div>
                                 </div>
-                                <TabsContent value="all" className="max-h-[calc(100%-300px)] overflow-hidden"
+
+                                <ScrollArea className="h-[calc(100%-30px)] border mt-4 mb-auto" rows={1}
+                                    style={{ height: 'calc(100% - 30px)' }}
                                 >
-                                    <ScrollArea className="h-[calc(100%-200px)] mt-3"
-                                    >
-                                        {/*<div key={index} className="flex p-4 space-x-4 border-b hover:bg-gray-50">*/}
-                                        <div className="flex flex-col mt-1 mb-1">
-                                            <div className="flex p-4 space-x-4 border rounded-md hover:bg-gray-50 bg-slate-100 mr-2 ml-2">
+
+                                    {/*<div key={index} className="flex p-4 space-x-4 border-b hover:bg-gray-50">*/}
+
+                                    <div className="h-[calc(100%-64px)] object-contain">
+                                        {Array(10).fill().map((_, index) => (
+                                            <div className="flex p-4 space-x-4 border-b hover:bg-gray-50">
                                                 <Avatar>
                                                     <AvatarImage src="/placeholder-user.jpg" />
                                                     <AvatarFallback className="bg-white border border-gray-200 text-gray-500"
                                                     >U</AvatarFallback>
                                                 </Avatar>
-                                                <div className="flex flex-col flex-1 min-w-0">
+                                                <div className="flex flex-col flex-1 min-w-10">
                                                     <div className="flex">
-                                                        <div className="flex">
-                                                            <span className="font-medium truncate">Name Surname</span>
-                                                        </div>
+                                                        <span className="font-medium truncate">Name Surname</span>
                                                         <div className="flex ml-auto mb-1">
                                                             <TooltipProvider>
                                                                 <Tooltip>
@@ -299,195 +300,12 @@ export function Playground() {
 
                                                 {/*</div>*/}
                                             </div>
-                                        </div>
-                                        <div className="flex flex-col mt-1 mb-1">
-                                            <div className="flex p-4 space-x-4 border rounded-md hover:bg-gray-50 bg-slate-100 mr-2 ml-2">
-                                                <Avatar>
-                                                    <AvatarImage src="/placeholder-user.jpg" />
-                                                    <AvatarFallback className="bg-white border border-gray-200 text-gray-500"
-                                                    >U</AvatarFallback>
-                                                </Avatar>
-                                                <div className="flex flex-col flex-1 min-w-0">
-                                                    <div className="flex">
-                                                        <div className="flex">
-                                                            <span className="font-medium truncate">Name Surname</span>
-                                                            <div className="w-2 h-2 bg-blue-500 ml-1.5 mt-0.5 rounded-full self-center mr-2"></div>
-                                                        </div>
-                                                        <div className="flex ml-auto mb-1">
-                                                            <TooltipProvider>
-                                                                <Tooltip>
-                                                                    <TooltipTrigger asChild>
-                                                                        <span className="text-sm text-gray-500 whitespace-nowrap self-end">8 months ago</span>
-                                                                    </TooltipTrigger>
-                                                                    <TooltipContent className="text-sm font-normal text-gray-500">Sent on 2023-01-01 at 8:00 PM</TooltipContent>
-                                                                </Tooltip>
-                                                            </TooltipProvider>
-                                                        </div>
-                                                    </div>
-                                                    <span className="text-sm text-gray-500 truncate">Subject of the email</span>
-                                                    <span className="text-sm text-gray-500 truncate">Preview of the email content...</span>
-                                                </div>
+                                        ))}
+                                    </div>
 
-                                                {/*</div>*/}
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-col mt-1 mb-1">
-                                            <div className="flex p-4 space-x-4 border rounded-md hover:bg-gray-50 bg-slate-100 mr-2 ml-2">
-                                                <Avatar>
-                                                    <AvatarImage src="/placeholder-user.jpg" />
-                                                    <AvatarFallback className="bg-white border border-gray-200 text-gray-500"
-                                                    >U</AvatarFallback>
-                                                </Avatar>
-                                                <div className="flex flex-col flex-1 min-w-0">
-                                                    <div className="flex">
-                                                        <div className="flex">
-                                                            <span className="font-medium truncate">Name Surname</span>
-                                                            <div className="w-2 h-2 bg-blue-500 ml-1.5 mt-0.5 rounded-full self-center mr-2"></div>
-                                                        </div>
-                                                        <div className="flex ml-auto mb-1">
-                                                            <TooltipProvider>
-                                                                <Tooltip>
-                                                                    <TooltipTrigger asChild>
-                                                                        <span className="text-sm text-gray-500 whitespace-nowrap self-end">8 months ago</span>
-                                                                    </TooltipTrigger>
-                                                                    <TooltipContent className="text-sm font-normal text-gray-500">Sent on 2023-01-01 at 8:00 PM</TooltipContent>
-                                                                </Tooltip>
-                                                            </TooltipProvider>
-                                                        </div>
-                                                    </div>
-                                                    <span className="text-sm text-gray-500 truncate">Subject of the email</span>
-                                                    <span className="text-sm text-gray-500 truncate">Preview of the email content...</span>
-                                                </div>
 
-                                                {/*</div>*/}
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-col mt-1 mb-1">
-                                            <div className="flex p-4 space-x-4 border rounded-md hover:bg-gray-50 bg-slate-100 mr-2 ml-2">
-                                                <Avatar>
-                                                    <AvatarImage src="/placeholder-user.jpg" />
-                                                    <AvatarFallback className="bg-white border border-gray-200 text-gray-500"
-                                                    >U</AvatarFallback>
-                                                </Avatar>
-                                                <div className="flex flex-col flex-1 min-w-0">
-                                                    <div className="flex">
-                                                        <div className="flex">
-                                                            <span className="font-medium truncate">Name Surname</span>
-                                                            <div className="w-2 h-2 bg-blue-500 ml-1.5 mt-0.5 rounded-full self-center mr-2"></div>
-                                                        </div>
-                                                        <div className="flex ml-auto mb-1">
-                                                            <TooltipProvider>
-                                                                <Tooltip>
-                                                                    <TooltipTrigger asChild>
-                                                                        <span className="text-sm text-gray-500 whitespace-nowrap self-end">8 months ago</span>
-                                                                    </TooltipTrigger>
-                                                                    <TooltipContent className="text-sm font-normal text-gray-500">Sent on 2023-01-01 at 8:00 PM</TooltipContent>
-                                                                </Tooltip>
-                                                            </TooltipProvider>
-                                                        </div>
-                                                    </div>
-                                                    <span className="text-sm text-gray-500 truncate">Subject of the email</span>
-                                                    <span className="text-sm text-gray-500 truncate">Preview of the email content...</span>
-                                                </div>
+                                </ScrollArea>
 
-                                                {/*</div>*/}
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-col mt-1 mb-1">
-                                            <div className="flex p-4 space-x-4 border rounded-md hover:bg-gray-50 bg-slate-100 mr-2 ml-2">
-                                                <Avatar>
-                                                    <AvatarImage src="/placeholder-user.jpg" />
-                                                    <AvatarFallback className="bg-white border border-gray-200 text-gray-500"
-                                                    >U</AvatarFallback>
-                                                </Avatar>
-                                                <div className="flex flex-col flex-1 min-w-0">
-                                                    <div className="flex">
-                                                        <div className="flex">
-                                                            <span className="font-medium truncate">Name Surname</span>
-                                                            <div className="w-2 h-2 bg-blue-500 ml-1.5 mt-0.5 rounded-full self-center mr-2"></div>
-                                                        </div>
-                                                        <div className="flex ml-auto mb-1">
-                                                            <TooltipProvider>
-                                                                <Tooltip>
-                                                                    <TooltipTrigger asChild>
-                                                                        <span className="text-sm text-gray-500 whitespace-nowrap self-end">8 months ago</span>
-                                                                    </TooltipTrigger>
-                                                                    <TooltipContent className="text-sm font-normal text-gray-500">Sent on 2023-01-01 at 8:00 PM</TooltipContent>
-                                                                </Tooltip>
-                                                            </TooltipProvider>
-                                                        </div>
-                                                    </div>
-                                                    <span className="text-sm text-gray-500 truncate">Subject of the email</span>
-                                                    <span className="text-sm text-gray-500 truncate">Preview of the email content...</span>
-                                                </div>
-
-                                                {/*</div>*/}
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-col mt-1 mb-1">
-                                            <div className="flex p-4 space-x-4 border rounded-md hover:bg-gray-50 bg-slate-100 mr-2 ml-2">
-                                                <Avatar>
-                                                    <AvatarImage src="/placeholder-user.jpg" />
-                                                    <AvatarFallback className="bg-white border border-gray-200 text-gray-500"
-                                                    >U</AvatarFallback>
-                                                </Avatar>
-                                                <div className="flex flex-col flex-1 min-w-0">
-                                                    <div className="flex">
-                                                        <div className="flex">
-                                                            <span className="font-medium truncate">Name Surname</span>
-                                                            <div className="w-2 h-2 bg-blue-500 ml-1.5 mt-0.5 rounded-full self-center mr-2"></div>
-                                                        </div>
-                                                        <div className="flex ml-auto mb-1">
-                                                            <TooltipProvider>
-                                                                <Tooltip>
-                                                                    <TooltipTrigger asChild>
-                                                                        <span className="text-sm text-gray-500 whitespace-nowrap self-end">8 months ago</span>
-                                                                    </TooltipTrigger>
-                                                                    <TooltipContent className="text-sm font-normal text-gray-500">Sent on 2023-01-01 at 8:00 PM</TooltipContent>
-                                                                </Tooltip>
-                                                            </TooltipProvider>
-                                                        </div>
-                                                    </div>
-                                                    <span className="text-sm text-gray-500 truncate">Subject of the email</span>
-                                                    <span className="text-sm text-gray-500 truncate">Preview of the email content...</span>
-                                                </div>
-
-                                                {/*</div>*/}
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-col mt-1 mb-1">
-                                            <div className="flex p-4 space-x-4 border rounded-md hover:bg-gray-50 bg-slate-100 mr-2 ml-2">
-                                                <Avatar>
-                                                    <AvatarImage src="/placeholder-user.jpg" />
-                                                    <AvatarFallback className="bg-white border border-gray-200 text-gray-500"
-                                                    >U</AvatarFallback>
-                                                </Avatar>
-                                                <div className="flex flex-col flex-1 min-w-0">
-                                                    <div className="flex">
-                                                        <div className="flex">
-                                                            <span className="font-medium truncate">Name Surname</span>
-                                                            <div className="w-2 h-2 bg-blue-500 ml-1.5 mt-0.5 rounded-full self-center mr-2"></div>
-                                                        </div>
-                                                        <div className="flex ml-auto mb-1">
-                                                            <TooltipProvider>
-                                                                <Tooltip>
-                                                                    <TooltipTrigger asChild>
-                                                                        <span className="text-sm text-gray-500 whitespace-nowrap self-end">8 months ago</span>
-                                                                    </TooltipTrigger>
-                                                                    <TooltipContent className="text-sm font-normal text-gray-500">Sent on 2023-01-01 at 8:00 PM</TooltipContent>
-                                                                </Tooltip>
-                                                            </TooltipProvider>
-                                                        </div>
-                                                    </div>
-                                                    <span className="text-sm text-gray-500 truncate">Subject of the email</span>
-                                                    <span className="text-sm text-gray-500 truncate">Preview of the email content...</span>
-                                                </div>
-
-                                                {/*</div>*/}
-                                            </div>
-                                        </div>
-                                    </ScrollArea>
-                                </TabsContent>
 
                             </Tabs>
                         </div>
