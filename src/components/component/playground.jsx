@@ -276,7 +276,9 @@ export function Playground() {
                                             </Avatar>
                                             <div className="flex flex-col flex-1 min-w-0">
                                                 <div className="flex">
-                                                    <span className="font-medium truncate">Name Surname</span>
+                                                    <div className="flex">
+                                                        <span className="font-medium truncate">Name Surname</span>
+                                                    </div>
                                                     <div className="flex ml-auto mb-1">
                                                         <TooltipProvider>
                                                             <Tooltip>
