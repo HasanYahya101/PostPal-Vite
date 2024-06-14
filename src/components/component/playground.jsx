@@ -58,6 +58,27 @@ const nextSaturday = (date) => {
 };
 
 export function Playground() {
+    const [height, setHeight] = useState(0);
+
+    const calculateHeight = () => {
+        const viewportHeight = window.innerHeight;
+
+        const topBarHeight = 30;
+        const calculatedHeight = viewportHeight - topBarHeight - 106;
+
+        setHeight(calculatedHeight);
+    };
+
+    useEffect(() => {
+        // Calculate height on mount
+        calculateHeight();
+
+        // Add resize event listener to recalculate height on window resize
+        window.addEventListener('resize', calculateHeight);
+
+        // Cleanup event listener on component unmount
+        return () => window.removeEventListener('resize', calculateHeight);
+    }, []);
 
 
     return (
@@ -268,7 +289,8 @@ export function Playground() {
 
                                 <TabsContent value="all">
 
-                                    <ScrollArea className="h-[calc(100%-30px)] border mt-4 mb-auto" rows={1}
+                                    <ScrollArea className="border mt-4 mb-auto" rows={1}
+                                        style={{ height: `${height}px` }}
                                     >
 
                                         {/*<div key={index} className="flex p-4 space-x-4 border-b hover:bg-gray-50">*/}
