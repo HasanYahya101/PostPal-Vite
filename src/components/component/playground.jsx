@@ -72,15 +72,6 @@ export function Playground() {
         setHeight(calculatedHeight);
     };
 
-    const calculateHeightMarginButton = () => {
-        const viewportHeight = window.innerHeight;
-
-        const topBarHeight = 30;
-        const calculatedHeight = viewportHeight - topBarHeight - 450;
-
-        setBottonMargin(calculatedHeight);
-    };
-
     const calculateHeightNav = () => {
         const viewportHeight = window.innerHeight;
 
@@ -99,17 +90,6 @@ export function Playground() {
 
         // Cleanup event listener on component unmount
         return () => window.removeEventListener('resize', calculateHeightNav);
-    }, []);
-
-    useEffect(() => {
-        // Calculate height on mount
-        calculateHeightMarginButton();
-
-        // Add resize event listener to recalculate height on window resize
-        window.addEventListener('resize', calculateHeightMarginButton);
-
-        // Cleanup event listener on component unmount
-        return () => window.removeEventListener('resize', calculateHeightMarginButton);
     }, []);
 
     useEffect(() => {
