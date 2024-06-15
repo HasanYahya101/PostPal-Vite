@@ -20,6 +20,7 @@ import {
     Trash2,
     Space,
     Settings,
+    MailPlus,
 } from "lucide-react";
 import {
     Tooltip,
@@ -113,6 +114,15 @@ export function Playground() {
                         <h1 className=" ml-4 text-lg font-semibold mr-2 truncate max-w-[10ch]">
                             Alicia Koch
                         </h1>
+                    </div>
+                    <div className="flex items-center h-10 self-left mt-6 mb-4"
+                    >
+                        <Button variant="default" className="bg-[#f1f5f9] text-black hover:bg-[#f1f5f9] hover:text-black rounded-2xl p-8 ml-4 mr-4 mt-4 mb-4 self-center hover:shadow-lg"
+                        >
+                            <MailPlus className="h-7 w-7"
+                            />
+                            <span className="ml-3 mb-0.5 text-[17px]">Compose</span>
+                        </Button>
                     </div>
                     <nav className="p-2 flex-grow">
                         <ScrollArea className="h-[calc(100%-60px)]"
@@ -234,7 +244,7 @@ export function Playground() {
                         </ScrollArea>
                     </nav>
 
-                    <div className="p-4 self-end justify-end mt-[calc(100%-152px)]"
+                    <div className="p-4 self-end justify-end mt-[calc(100%-234px)]"
                     >{/*style={{ marginTop: `${bottonMargin}px` }}*/}
                         <Button variant="outline" className="w-full">
                             <span>Settings & Profile</span>
