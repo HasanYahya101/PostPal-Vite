@@ -630,8 +630,8 @@ function ComposeDialogue() {
                     <ScrollArea
                         style={{ height: `${dialogHeight}px` }}
                     >
-                        <div className="flex">
-                            <span>
+                        <div className="flex ml-4 mr-4">
+                            <span className="self-center mb-4 font-normal">
                                 To:
                             </span>
                             <Popover open={open_} onOpenChange={setOpen_}>
@@ -640,9 +640,9 @@ function ComposeDialogue() {
                                         variant="outline"
                                         role="combobox"
                                         aria-expanded={open_}
-                                        className="w-[200px] justify-between"
+                                        className="ml-6 mb-4 w-full justify-between bg-[#f1f5f9] hover:bg-[#f1f5f9] hover:shadow-md"
                                     >
-                                        S
+                                        Select a recipient...
                                         <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                                     </Button>
                                 </PopoverTrigger>
@@ -679,16 +679,21 @@ function ComposeDialogue() {
                             </Popover>
                         </div>
                         <Separator />
-                        <Input className="border-none outline-none focus:border-none focus-visible:ring-transparent focus-visible:border-none bg-[#f1f5f9]"
-                            style={{
-                                outline: 'none',
-                                boxShadow: 'none',
-                            }}
-                            placeholder="Enter your Subject here"
-                        >
-                        </Input>
+                        <div className="flex ml-4 mr-4 mt-1 mb-1">
+                            <span className="self-center">
+                                Subject:
+                            </span>
+                            <Input className="ml-4 border-none outline-none focus:border-none focus-visible:ring-transparent focus-visible:border-none bg-[#f1f5f9]"
+                                style={{
+                                    outline: 'none',
+                                    boxShadow: 'none',
+                                }}
+                                placeholder="Enter your Subject here"
+                            >
+                            </Input>
+                        </div>
                         <Separator />
-                        <Textarea className="h-[60vh] border-none outline-none focus:border-none focus-visible:ring-transparent focus-visible:border-none bg-[#f1f5f9] hover:border-none resize-none overflow-visible contain-content"
+                        <Textarea className="h-[50vh] border-none outline-none focus:border-none focus-visible:ring-transparent focus-visible:border-none bg-[#f1f5f9] hover:border-none resize-none overflow-visible contain-content"
                             style={{
                                 outline: 'none',
                                 boxShadow: 'none',
