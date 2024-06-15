@@ -640,7 +640,7 @@ function ComposeDialogue() {
                                         variant="outline"
                                         role="combobox"
                                         aria-expanded={open_}
-                                        className="ml-6 mb-4 w-full justify-between bg-[#f1f5f9] hover:bg-[#f1f5f9] hover:shadow-md hover:bg-transparent"
+                                        className="ml-6 mb-4 w-full justify-between bg-[#f1f5f9] hover:shadow-md hover:bg-cyan-50"
                                     >
                                         Select a recipient...
                                         <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
@@ -693,7 +693,7 @@ function ComposeDialogue() {
                             </Input>
                         </div>
                         <Separator />
-                        <Textarea className="h-[50vh] border-none outline-none focus:border-none focus-visible:ring-transparent focus-visible:border-none bg-[#f1f5f9] hover:border-none resize-none overflow-visible contain-content"
+                        <Textarea className="h-[50vh] mt-0.5 border-none outline-none focus:border-none focus-visible:ring-transparent focus-visible:border-none bg-[#f1f5f9] hover:border-none resize-none overflow-visible contain-content"
                             style={{
                                 outline: 'none',
                                 boxShadow: 'none',
