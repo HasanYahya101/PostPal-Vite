@@ -51,6 +51,15 @@ import {
     PopoverTrigger,
 } from "@/components/ui/popover";
 import { Textarea } from "../ui/textarea";
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog";
+import { useRef } from "react";
 
 const today = new Date();
 
@@ -117,12 +126,7 @@ export function Playground() {
                     </div>
                     <div className="flex items-center h-10 self-left mt-6 mb-4"
                     >
-                        <Button variant="default" className="bg-[#f1f5f9] h-6 text-black hover:bg-[#f1f5f9] hover:text-black rounded-2xl p-8 ml-4 mr-4 mt-4 mb-4 self-center hover:shadow-lg"
-                        >
-                            <MailPlus className="h-7 w-7"
-                            />
-                            <span className="ml-3 mb-0.5 text-[15px]">Compose</span>
-                        </Button>
+                        <ComposeDialogue />
                     </div>
                     <nav className="p-2 flex-grow">
                         <ScrollArea className="h-[calc(100%-60px)]"
@@ -564,6 +568,64 @@ export function Playground() {
                     </div>
                 </main >
             </div >
+        )
+    );
+}
+
+function ComposeDialogue() {
+    const [dialogHeight, setDialogHeight] = useState(0);
+
+    const calculateHeight = () => {
+        const viewportHeight = window.innerHeight;
+
+        const topBarHeight = 30;
+        const calculatedHeight = viewportHeight - topBarHeight - 106;
+
+        setDialogHeight(calculatedHeight);
+    }
+
+    useEffect(() => {
+        // Calculate height on mount
+        calculateHeight();
+
+        // Add resize event listener to recalculate height on window resize
+        window.addEventListener('resize', calculateHeight);
+
+        // Cleanup event listener on component unmount
+        return () => window.removeEventListener('resize', calculateHeight);
+    }, []);
+    return (
+        (
+            <Dialog icon={false}
+            >
+                <DialogTrigger asChild>
+                    <Button variant="default" className="bg-[#f1f5f9] h-6 text-black hover:bg-[#f1f5f9] hover:text-black rounded-2xl p-8 ml-4 mr-4 mt-4 mb-4 self-center hover:shadow-lg"
+                    >
+                        <MailPlus className="h-7 w-7"
+                        />
+                        <span className="ml-3 mb-0.5 text-[15px]">Compose</span>
+                    </Button>
+                </DialogTrigger>
+                <DialogContent className="bg-[#f1f5f9] max-w-[calc(100%/2)]">
+                    <DialogHeader className="bg-[#f1f5f9] border-b border-gray-200 p-4"
+                    >
+                        <DialogTitle>New Message</DialogTitle>
+                    </DialogHeader>
+                    <ScrollArea
+                        style={{ height: `${dialogHeight}px` }}
+                    >
+                        <Textarea className="border-none outline-none focus:border-none focus-visible:ring-transparent focus-visible:border-none bg-[#f1f5f9] hover:border-none resize-none overflow-visible contain-content"
+                            style={{
+                                outline: 'none',
+                                boxShadow: 'none',
+                            }}
+                            placeholder="Type your message here"
+                        >
+
+                        </Textarea>
+                    </ScrollArea>
+                </DialogContent>
+            </Dialog >
         )
     );
 }
