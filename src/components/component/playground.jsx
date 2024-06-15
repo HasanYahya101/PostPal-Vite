@@ -614,10 +614,28 @@ function ComposeDialogue() {
                     <ScrollArea
                         style={{ height: `${dialogHeight}px` }}
                     >
-                        <Textarea className="border-none outline-none focus:border-none focus-visible:ring-transparent focus-visible:border-none bg-[#f1f5f9] hover:border-none resize-none overflow-visible contain-content"
+                        <Input className="border-none outline-none focus:border-none focus-visible:ring-transparent focus-visible:border-none bg-[#f1f5f9]"
                             style={{
                                 outline: 'none',
                                 boxShadow: 'none',
+                            }}
+                            placeholder="Enter recipient email here"
+                        ></Input>
+                        <Separator />
+                        <Input className="border-none outline-none focus:border-none focus-visible:ring-transparent focus-visible:border-none bg-[#f1f5f9]"
+                            style={{
+                                outline: 'none',
+                                boxShadow: 'none',
+                            }}
+                            placeholder="Enter your Subject here"
+                        >
+                        </Input>
+                        <Separator />
+                        <Textarea className="h-[60vh] border-none outline-none focus:border-none focus-visible:ring-transparent focus-visible:border-none bg-[#f1f5f9] hover:border-none resize-none overflow-visible contain-content"
+                            style={{
+                                outline: 'none',
+                                boxShadow: 'none',
+                                scrollbarWidth: 'none',
                             }}
                             placeholder="Type your message here"
                         >
