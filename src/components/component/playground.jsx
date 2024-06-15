@@ -640,7 +640,7 @@ function ComposeDialogue() {
                                         variant="outline"
                                         role="combobox"
                                         aria-expanded={open_}
-                                        className="ml-6 mb-4 w-full justify-between bg-[#f1f5f9] hover:bg-[#f1f5f9] hover:shadow-md"
+                                        className="ml-6 mb-4 w-full justify-between bg-[#f1f5f9] hover:bg-[#f1f5f9] hover:shadow-md hover:bg-transparent"
                                     >
                                         Select a recipient...
                                         <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
