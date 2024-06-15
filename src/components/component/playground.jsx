@@ -60,6 +60,17 @@ import {
     DialogTrigger,
 } from "@/components/ui/dialog";
 import { useRef } from "react";
+import * as React from "react"
+import { Check, ChevronsUpDown } from "lucide-react";
+import { cn } from "@/lib/utils";
+import {
+    Command,
+    CommandEmpty,
+    CommandGroup,
+    CommandInput,
+    CommandItem,
+} from "@/components/ui/command";
+import { CommandList } from "cmdk";
 
 const today = new Date();
 
@@ -575,6 +586,11 @@ export function Playground() {
 function ComposeDialogue() {
     const [dialogHeight, setDialogHeight] = useState(0);
 
+    const [open, setOpen] = useState(false);
+
+    const [open_, setOpen_] = React.useState(false)
+    const [value_, setValue] = React.useState("")
+
     const calculateHeight = () => {
         const viewportHeight = window.innerHeight;
 
@@ -614,13 +630,54 @@ function ComposeDialogue() {
                     <ScrollArea
                         style={{ height: `${dialogHeight}px` }}
                     >
-                        <Input className="border-none outline-none focus:border-none focus-visible:ring-transparent focus-visible:border-none bg-[#f1f5f9]"
-                            style={{
-                                outline: 'none',
-                                boxShadow: 'none',
-                            }}
-                            placeholder="Enter recipient email here"
-                        ></Input>
+                        <div className="flex">
+                            <span>
+                                To:
+                            </span>
+                            <Popover open={open_} onOpenChange={setOpen_}>
+                                <PopoverTrigger asChild>
+                                    <Button
+                                        variant="outline"
+                                        role="combobox"
+                                        aria-expanded={open_}
+                                        className="w-[200px] justify-between"
+                                    >
+                                        S
+                                        <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                                    </Button>
+                                </PopoverTrigger>
+                                <PopoverContent className="w-[200px]">
+                                    <Command>
+                                        <CommandInput
+                                            placeholder="Search for a user"
+                                            value={value_}
+                                            onChange={(event) => setValue(event.target.value)}
+                                        />
+                                        <CommandEmpty>No framework found.</CommandEmpty>
+                                        <CommandList>
+                                            <CommandGroup>
+                                                <CommandItem
+                                                    key={1}
+                                                    value="1"
+                                                >
+                                                    <div>
+                                                        Name
+                                                    </div>
+                                                </CommandItem>
+                                                <CommandItem
+                                                    key={2}
+                                                    value="2"
+                                                >
+                                                    <div>
+                                                        Hasan
+                                                    </div>
+                                                </CommandItem>
+                                            </CommandGroup>
+                                        </CommandList>
+                                    </Command>
+                                </PopoverContent>
+                            </Popover>
+                        </div>
                         <Separator />
                         <Input className="border-none outline-none focus:border-none focus-visible:ring-transparent focus-visible:border-none bg-[#f1f5f9]"
                             style={{
