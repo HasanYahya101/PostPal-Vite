@@ -117,11 +117,11 @@ export function Playground() {
                     </div>
                     <div className="flex items-center h-10 self-left mt-6 mb-4"
                     >
-                        <Button variant="default" className="bg-[#f1f5f9] text-black hover:bg-[#f1f5f9] hover:text-black rounded-2xl p-8 ml-4 mr-4 mt-4 mb-4 self-center hover:shadow-lg"
+                        <Button variant="default" className="bg-[#f1f5f9] h-6 text-black hover:bg-[#f1f5f9] hover:text-black rounded-2xl p-8 ml-4 mr-4 mt-4 mb-4 self-center hover:shadow-lg"
                         >
                             <MailPlus className="h-7 w-7"
                             />
-                            <span className="ml-3 mb-0.5 text-[17px]">Compose</span>
+                            <span className="ml-3 mb-0.5 text-[15px]">Compose</span>
                         </Button>
                     </div>
                     <nav className="p-2 flex-grow">
