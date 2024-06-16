@@ -625,7 +625,9 @@ function ComposeDialogue() {
                 <DialogContent className="bg-white max-w-[calc(100%/2)]">
                     <DialogHeader className="bg-[#f1f5f9] border-b border-[#f1f5f9] rounded-t-md rounded-b-none"
                     >
-                        <DialogTitle className="text-md mt-0 mb-0 p-2.5 ml-2">New Message</DialogTitle>
+                        <DialogTitle className="text-lg mt-0 mb-0 p-2.5 ml-2">
+                            <span className="text-lg">New Message</span>
+                        </DialogTitle>
                     </DialogHeader>
                     <ScrollArea
                         style={{ height: `${dialogHeight}px` }}
