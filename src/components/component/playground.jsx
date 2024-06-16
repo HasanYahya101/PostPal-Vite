@@ -58,7 +58,7 @@ import {
     DialogHeader,
     DialogTitle,
     DialogTrigger,
-} from "@/components/ui/dialog";
+} from "@/components/ui/dialog-compose";
 import { useRef } from "react";
 import * as React from "react"
 import { Check, ChevronsUpDown } from "lucide-react";
@@ -623,9 +623,10 @@ function ComposeDialogue() {
                     </Button>
                 </DialogTrigger>
                 <DialogContent className="bg-[#f1f5f9] max-w-[calc(100%/2)]">
-                    <DialogHeader className="bg-[#f1f5f9] border-b border-gray-200 p-4"
+                    <DialogHeader className="bg-[#f1f5f9] border-b border-black-200 rounded-md"
                     >
-                        <DialogTitle>New Message</DialogTitle>
+                        <DialogTitle className="text-md mt-0 mb-0 p-2.5 ml-2">New Message</DialogTitle>
+                        <Separator className="bg-black" />
                     </DialogHeader>
                     <ScrollArea
                         style={{ height: `${dialogHeight}px` }}
