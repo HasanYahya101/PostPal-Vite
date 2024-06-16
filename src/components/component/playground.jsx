@@ -622,11 +622,10 @@ function ComposeDialogue() {
                         <span className="ml-3 mb-0.5 text-[15px]">Compose</span>
                     </Button>
                 </DialogTrigger>
-                <DialogContent className="bg-[#f1f5f9] max-w-[calc(100%/2)]">
-                    <DialogHeader className="bg-[#f1f5f9] border-b border-black-200 rounded-md"
+                <DialogContent className="bg-white max-w-[calc(100%/2)]">
+                    <DialogHeader className="bg-[#f1f5f9] border-b border-[#f1f5f9] rounded-t-md rounded-b-none"
                     >
                         <DialogTitle className="text-md mt-0 mb-0 p-2.5 ml-2">New Message</DialogTitle>
-                        <Separator className="bg-black" />
                     </DialogHeader>
                     <ScrollArea
                         style={{ height: `${dialogHeight}px` }}
