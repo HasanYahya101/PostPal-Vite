@@ -624,7 +624,7 @@ function ComposeDialogue() {
                     </Button>
                 </DialogTrigger>
                 <DialogContent className="bg-white max-w-[50vw]">
-                    <DialogHeader className="bg-[#f1f5f9] border-b rounded-t-md rounded-b-none"
+                    <DialogHeader className="bg-[#f1f5f9] border-b mb-2 rounded-t-md rounded-b-none"
                     >
                         <DialogTitle className="text-lg mt-0 mb-0 p-2.5 ml-2">
                             <div className="flex justify-center items-center">
@@ -641,10 +641,10 @@ function ComposeDialogue() {
                         style={{ height: `${dialogHeight}px` }}
                     >
                         <div className="flex ml-4 mr-4">
-                            <span className="self-center mb-4 font-normal">
+                            <span className="self-center mb-2 top-0 font-normal">
                                 To:
                             </span>
-                            <Popover open={open_} onOpenChange={setOpen_}>
+                            {/*<Popover open={open_} onOpenChange={setOpen_}>
                                 <PopoverTrigger asChild>
                                     <Button
                                         variant="outline"
@@ -687,7 +687,7 @@ function ComposeDialogue() {
                                         </CommandList>
                                     </Command>
                                 </PopoverContent>
-                            </Popover>
+                            </Popover>*/}
                         </div>
                         <Separator />
                         <div className="flex ml-4 mr-4 mt-1 mb-1">
