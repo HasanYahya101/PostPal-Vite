@@ -136,7 +136,7 @@ export function Playground() {
                             Alicia Koch
                         </h1>
                     </div>
-                    <div className="flex items-center h-10 self-left mt-3 mb-1"
+                    <div className="flex items-center h-10 self-left mt-6 mb-3 ml-2"
                     >
                         <ComposeDialogue />
                     </div>
@@ -613,7 +613,7 @@ function ComposeDialogue() {
     }, []);
     return (
         (
-            <Dialog icon={false}
+            <Dialog icon={false} open={open} onOpenChange={setOpen}
             >
                 <DialogTrigger asChild>
                     <Button variant="default" className="bg-[#f1f5f9] h-6 text-black hover:bg-[#f1f5f9] hover:text-black rounded-2xl p-8 ml-4 mr-4 mt-4 mb-4 self-center hover:shadow-lg"
@@ -629,7 +629,9 @@ function ComposeDialogue() {
                         <DialogTitle className="text-lg mt-0 mb-0 p-2.5 ml-2">
                             <div className="flex justify-center items-center">
                                 <span className="text-medium">New Message</span>
-                                <div className="ml-auto mr-1 group hover:bg-gray-200 hover:cursor-pointer rounded-md group">
+                                <div className="ml-auto mr-1 group hover:bg-gray-200 hover:cursor-pointer rounded-md group"
+                                    onClick={() => setOpen(false)}
+                                >
                                     <X className="h-4 w-4 m-1 group-hover:opacity-100 opacity-70 group-hover:cursor-pointer rounded-md group-hover:bg-gray-200" onClick={() => setOpen(false)} />
                                 </div>
                             </div>
