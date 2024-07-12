@@ -586,12 +586,12 @@ export function Playground() {
 
 const DeleteableChip = ({ text, avatarSrc, onDelete }) => {
     return (
-        <div className="inline-flex items-center bg-gray-200 rounded-full pr-2 mr-2 mb-2 overflow-hidden p-[1.5px]">
+        <div className="inline-flex items-center text-center justify-center bg-gray-200 rounded-full pr-2 mr-2 mb-2 overflow-hidden p-[2px]">
             <Avatar className="h-6 w-6 mr-2 border">
                 <AvatarImage src={avatarSrc} alt={text} />
                 <AvatarFallback className='text-sm'>{text[0].toUpperCase()}</AvatarFallback>
             </Avatar>
-            <span className="text-sm font-medium mr-2">{text}</span>
+            <span className="text-sm font-medium mr-2 text-center justify-center">{text}</span>
             <button
                 onClick={onDelete}
                 className="text-gray-500 hover:text-gray-700 focus:outline-none"
