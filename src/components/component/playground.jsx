@@ -716,7 +716,7 @@ function ComposeDialogue() {
                                             onChange={handleInputChange}
                                             onKeyDown={handleInputKeyDown}
                                             className={`flex-grow outline-none text-sm ${chips.length > 0 ? '-mt-[6.5px]' : 'mt-[3px]'}`}
-                                            {...(chips.length > 0 ? { placeholder: '' } : { placeholder: 'Enter your recipient...' })}
+                                            {...(chips.length > 0 ? { placeholder: '' } : { placeholder: 'Enter your recipient here...' })}
                                             maxLength={25}
                                         />
                                     </div>
@@ -777,7 +777,7 @@ function ComposeDialogue() {
                                     outline: 'none',
                                     boxShadow: 'none',
                                 }}
-                                placeholder="Enter your Subject here"
+                                placeholder="Enter your subject here..."
                             >
                             </input>
                         </div>
