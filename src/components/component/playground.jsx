@@ -656,6 +656,10 @@ function ComposeDialogue() {
         setInputValue('');
     }
 
+    const handleDelete = (chipId) => {
+        setChips(chips.filter((chip) => chip.id !== chipId));
+    }
+
     return (
         (
             <Dialog icon={false} open={open} onOpenChange={setOpen}
@@ -690,7 +694,7 @@ function ComposeDialogue() {
                                 <span className="top-0 font-normal">
                                     To:
                                 </span>
-                                <div className="w-full max-w-md px-2">
+                                <div className="w-full max-w-full px-3">
                                     <div className="border-none rounded-lg flex flex-wrap items-center">
                                         {chips.map((chip) => (
                                             <DeleteableChip
@@ -705,7 +709,7 @@ function ComposeDialogue() {
                                             value={inputValue}
                                             onChange={handleInputChange}
                                             onKeyDown={handleInputKeyDown}
-                                            className="flex-grow outline-none p-1 w-full"
+                                            className="flex-grow outline-none p-1 w-full text-sm"
                                             {...(chips.length > 0 ? { placeholder: '' } : { placeholder: 'Enter recipient...' })}
                                         />
                                     </div>
