@@ -584,6 +584,24 @@ export function Playground() {
     );
 }
 
+const DeleteableChip = ({ text, avatarSrc, onDelete }) => {
+    return (
+        <div className="inline-flex items-center bg-gray-200 rounded-full pr-2 mr-2 mb-2 overflow-hidden p-[1.5px]">
+            <Avatar className="h-6 w-6 mr-2 border">
+                <AvatarImage src={avatarSrc} alt={text} />
+                <AvatarFallback className='text-sm'>{text[0].toUpperCase()}</AvatarFallback>
+            </Avatar>
+            <span className="text-sm font-medium mr-2">{text}</span>
+            <button
+                onClick={onDelete}
+                className="text-gray-500 hover:text-gray-700 focus:outline-none"
+            >
+                <X size={16} />
+            </button>
+        </div>
+    );
+};
+
 function ComposeDialogue() {
     const [dialogHeight, setDialogHeight] = useState(0);
 
@@ -611,6 +629,33 @@ function ComposeDialogue() {
         // Cleanup event listener on component unmount
         return () => window.removeEventListener('resize', calculateHeight);
     }, []);
+
+    const [chips, setChips] = useState([]);
+    const [inputValue, setInputValue] = useState('');
+
+    const handleInputChange = (event) => {
+        setInputValue(event.target.value);
+    }
+
+    const handleInputKeyDown = (e) => {
+        if ((e.key === ' ' || e.key === 'Enter') && inputValue.trim()) {
+            e.preventDefault();
+            addChip(inputValue.trim());
+        }
+    };
+
+    const addChip = (text) => {
+        setChips([
+            ...chips,
+            {
+                id: chips.length + 1,
+                text,
+                avatarSrc: '/placeholder-user.jpg',
+            },
+        ]);
+        setInputValue('');
+    }
+
     return (
         (
             <Dialog icon={false} open={open} onOpenChange={setOpen}
@@ -627,9 +672,9 @@ function ComposeDialogue() {
                     <DialogHeader className="bg-[#f1f5f9] border-b mb-2 rounded-t-md rounded-b-none"
                     >
                         <DialogTitle className="text-lg mt-0 mb-0 p-2.5 ml-2">
-                            <div className="flex justify-center items-center">
-                                <span className="text-medium">New Message</span>
-                                <div className="ml-auto mr-0 group hover:bg-gray-200 hover:cursor-pointer rounded-md group"
+                            <div className="flex">
+                                <span className="text-medium top-1">New Message</span>
+                                <div className=" justify-center items-center ml-auto mr-0 group hover:bg-gray-200 hover:cursor-pointer rounded-md group"
                                     onClick={() => setOpen(false)}
                                 >
                                     <X className="h-4 w-4 m-1 group-hover:opacity-100 opacity-70 group-hover:cursor-pointer rounded-md group-hover:bg-gray-200" onClick={() => setOpen(false)} />
@@ -641,9 +686,31 @@ function ComposeDialogue() {
                         style={{ height: `${dialogHeight}px` }}
                     >
                         <div className="flex ml-4 mr-4">
-                            <span className="self-center mb-2 top-0 font-normal">
-                                To:
-                            </span>
+                            <div className="flex mb-2 items-start">
+                                <span className="top-0 font-normal">
+                                    To:
+                                </span>
+                                <div className="w-full max-w-md px-2">
+                                    <div className="border-none rounded-lg flex flex-wrap items-center">
+                                        {chips.map((chip) => (
+                                            <DeleteableChip
+                                                key={chip.id}
+                                                text={chip.text}
+                                                avatarSrc={chip.avatarSrc}
+                                                onDelete={() => handleDelete(chip.id)}
+                                            />
+                                        ))}
+                                        <input
+                                            type="text"
+                                            value={inputValue}
+                                            onChange={handleInputChange}
+                                            onKeyDown={handleInputKeyDown}
+                                            className="flex-grow outline-none p-1 w-full"
+                                            {...(chips.length > 0 ? { placeholder: '' } : { placeholder: 'Enter recipient...' })}
+                                        />
+                                    </div>
+                                </div>
+                            </div>
                             {/*<Popover open={open_} onOpenChange={setOpen_}>
                                 <PopoverTrigger asChild>
                                     <Button
