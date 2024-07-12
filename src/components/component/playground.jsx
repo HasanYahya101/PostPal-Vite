@@ -696,12 +696,12 @@ function ComposeDialogue() {
                         className='max-w-50vw w-50vw'
                     >
                         <div className="flex ml-6 mr-6 w-full mt-1 mb-1 max-w-50vw">
-                            <div className={`flex ${chips.length !== 0 ? 'mb-0' : 'mb-[9px]'} items-start`}>
+                            <div className={`flex ${chips.length !== 0 ? 'mb-0' : 'mb-[9px]'} items-start w-full max-w-[50vw]`}>
                                 <span className="font-normal mr-[6px]">
                                     To:
                                 </span>
-                                <div className="px-3">
-                                    <div className="border-none rounded-lg flex flex-wrap items-center">
+                                <div className="px-3 w-full">
+                                    <div className="border-none rounded-lg flex flex-wrap items-center w-full">
                                         {chips.map((chip) => (
                                             <DeleteableChip
                                                 key={chip.id}
@@ -715,7 +715,7 @@ function ComposeDialogue() {
                                             value={inputValue}
                                             onChange={handleInputChange}
                                             onKeyDown={handleInputKeyDown}
-                                            className={`flex-grow outline-none text-sm ${chips.length > 0 ? '-mt-[6.5px]' : 'mt-[3px]'}`}
+                                            className={`flex-grow w-full max-w-[44vw] outline-none text-sm ${chips.length > 0 ? '-mt-[6.5px]' : 'mt-[3px]'}`}
                                             {...(chips.length > 0 ? { placeholder: '' } : { placeholder: 'Enter your recipient here...' })}
                                             maxLength={25}
                                         />
