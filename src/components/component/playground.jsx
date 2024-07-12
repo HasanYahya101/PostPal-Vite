@@ -697,7 +697,7 @@ function ComposeDialogue() {
                     >
                         <div className="flex ml-4 mr-4 w-full">
                             <div className={`flex ${chips.length !== 0 ? 'mb-0' : 'mb-[9px]'} items-start w-full`}>
-                                <span className="top-0 font-normal">
+                                <span className="top-0 font-normal mr-[6px]">
                                     To:
                                 </span>
                                 <div className=" w-[98%] px-3">
@@ -768,18 +768,18 @@ function ComposeDialogue() {
                             </Popover>*/}
                         </div>
                         <Separator />
-                        <div className="flex ml-4 mr-4 mt-1 mb-1">
+                        <div className="flex ml-4 mr-4 mt-2 mb-2">
                             <span className="self-center">
                                 Subject:
                             </span>
-                            <Input className="ml-4 border-none outline-none focus:border-none focus-visible:ring-transparent focus-visible:border-none bg-[#f1f5f9]"
+                            <input className="ml-4 text-sm border-none outline-none focus:border-none focus-visible:ring-transparent focus-visible:border-none"
                                 style={{
                                     outline: 'none',
                                     boxShadow: 'none',
                                 }}
                                 placeholder="Enter your Subject here"
                             >
-                            </Input>
+                            </input>
                         </div>
                         <Separator />
                         <Textarea className="h-[50vh] mt-0.5 border-none outline-none focus:border-none focus-visible:ring-transparent focus-visible:border-none bg-[#f1f5f9] hover:border-none resize-none overflow-visible contain-content"
