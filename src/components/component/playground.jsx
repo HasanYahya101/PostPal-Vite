@@ -715,8 +715,8 @@ function ComposeDialogue() {
                                             value={inputValue}
                                             onChange={handleInputChange}
                                             onKeyDown={handleInputKeyDown}
-                                            className="flex-grow outline-none p-1 text-sm"
-                                            {...(chips.length > 0 ? { placeholder: '' } : { placeholder: 'Enter recipient...' })}
+                                            className="flex-grow outline-none mt-[3px] text-sm"
+                                            {...(chips.length > 0 ? { placeholder: '' } : { placeholder: 'Enter your recipient...' })}
                                         />
                                     </div>
                                 </div>
