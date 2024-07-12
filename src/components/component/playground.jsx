@@ -696,7 +696,7 @@ function ComposeDialogue() {
                         className='w-full'
                     >
                         <div className="flex ml-4 mr-4 w-full">
-                            <div className="flex mb-2 items-start w-full">
+                            <div className={`flex ${chips.length !== 0 ? 'mb-0' : 'mb-[9px]'} items-start w-full`}>
                                 <span className="top-0 font-normal">
                                     To:
                                 </span>
@@ -715,8 +715,9 @@ function ComposeDialogue() {
                                             value={inputValue}
                                             onChange={handleInputChange}
                                             onKeyDown={handleInputKeyDown}
-                                            className="flex-grow outline-none mt-[3px] text-sm"
+                                            className={`flex-grow outline-none text-sm ${chips.length > 0 ? '-mt-[6.5px]' : 'mt-[3px]'}`}
                                             {...(chips.length > 0 ? { placeholder: '' } : { placeholder: 'Enter your recipient...' })}
+                                            maxLength={25}
                                         />
                                     </div>
                                 </div>
