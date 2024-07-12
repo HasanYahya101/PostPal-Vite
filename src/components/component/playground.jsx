@@ -678,7 +678,7 @@ function ComposeDialogue() {
                     </Button>
                 </DialogTrigger>
                 <DialogContent className="bg-white max-w-[50vw]">
-                    <DialogHeader className="bg-[#f1f5f9] border-b mb-2 rounded-t-md rounded-b-none"
+                    <DialogHeader className="bg-[#f1f5f9] border-b border-t mb-2 rounded-t-md rounded-b-none"
                     >
                         <DialogTitle className="text-lg mt-0 mb-0 p-2.5 ml-2">
                             <div className="flex">
@@ -724,7 +724,7 @@ function ComposeDialogue() {
                             </div>
                         </div>
                         <div className="max-w-[47vw] ml-auto mr-auto">
-                            <Separator className='' />
+                            <Separator className='bg-gray-200' />
                         </div>
                         <div className="flex ml-6 mr-6 mt-3 mb-3">
                             <span className="self-center">
@@ -740,7 +740,7 @@ function ComposeDialogue() {
                             </input>
                         </div>
                         <div className="max-w-[47vw] ml-auto mr-auto">
-                            <Separator className='' />
+                            <Separator className='bg-gray-200' />
                         </div>
                         <Textarea className="h-[50vh] mt-0.5 border-none outline-none focus:border-none focus-visible:ring-transparent focus-visible:border-none bg-[#f1f5f9] hover:border-none resize-none overflow-visible contain-content"
                             style={{
