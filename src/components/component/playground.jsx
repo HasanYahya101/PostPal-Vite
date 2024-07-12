@@ -693,15 +693,15 @@ function ComposeDialogue() {
                     </DialogHeader>
                     <ScrollArea
                         style={{ height: `${dialogHeight}px` }}
-                        className='w-full'
+                        className='max-w-50vw w-50vw'
                     >
-                        <div className="flex ml-4 mr-4 w-full mt-1 mb-1">
-                            <div className={`flex ${chips.length !== 0 ? 'mb-0' : 'mb-[9px]'} items-start w-full`}>
-                                <span className="top-0 font-normal mr-[6px]">
+                        <div className="flex ml-6 mr-6 w-full mt-1 mb-1 max-w-50vw">
+                            <div className={`flex ${chips.length !== 0 ? 'mb-0' : 'mb-[9px]'} items-start`}>
+                                <span className="font-normal mr-[6px]">
                                     To:
                                 </span>
-                                <div className=" w-[98%] px-3">
-                                    <div className="w-full border-none rounded-lg flex flex-wrap items-center">
+                                <div className="px-3">
+                                    <div className="border-none rounded-lg flex flex-wrap items-center">
                                         {chips.map((chip) => (
                                             <DeleteableChip
                                                 key={chip.id}
@@ -722,53 +722,11 @@ function ComposeDialogue() {
                                     </div>
                                 </div>
                             </div>
-                            {/*<Popover open={open_} onOpenChange={setOpen_}>
-                                <PopoverTrigger asChild>
-                                    <Button
-                                        variant="outline"
-                                        role="combobox"
-                                        aria-expanded={open_}
-                                        className="ml-6 mb-4 w-full justify-between bg-[#f1f5f9] hover:shadow-md hover:bg-cyan-50"
-                                    >
-                                        Select a recipient...
-                                        <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
-                                    </Button>
-                                </PopoverTrigger>
-                                <PopoverContent className="w-[200px]">
-                                    <Command>
-                                        <CommandInput
-                                            placeholder="Search for a user"
-                                            value={value_}
-                                            onChange={(event) => setValue(event.target.value)}
-                                        />
-                                        <CommandEmpty>No framework found.</CommandEmpty>
-                                        <CommandList>
-                                            <CommandGroup>
-                                                <CommandItem
-                                                    key={1}
-                                                    value="1"
-                                                >
-
-                                                    <div>
-                                                        Name
-                                                    </div>
-                                                </CommandItem>
-                                                <CommandItem
-                                                    key={2}
-                                                    value="2"
-                                                >
-                                                    <div>
-                                                        Hasan
-                                                    </div>
-                                                </CommandItem>
-                                            </CommandGroup>
-                                        </CommandList>
-                                    </Command>
-                                </PopoverContent>
-                            </Popover>*/}
                         </div>
-                        <Separator />
-                        <div className="flex ml-4 mr-4 mt-3 mb-3">
+                        <div className="max-w-[47vw] ml-auto mr-auto">
+                            <Separator className='' />
+                        </div>
+                        <div className="flex ml-6 mr-6 mt-3 mb-3">
                             <span className="self-center">
                                 Subject:
                             </span>
@@ -781,7 +739,9 @@ function ComposeDialogue() {
                             >
                             </input>
                         </div>
-                        <Separator />
+                        <div className="max-w-[47vw] ml-auto mr-auto">
+                            <Separator className='' />
+                        </div>
                         <Textarea className="h-[50vh] mt-0.5 border-none outline-none focus:border-none focus-visible:ring-transparent focus-visible:border-none bg-[#f1f5f9] hover:border-none resize-none overflow-visible contain-content"
                             style={{
                                 outline: 'none',
