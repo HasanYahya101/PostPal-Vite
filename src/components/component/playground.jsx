@@ -596,7 +596,9 @@ const DeleteableChip = ({ text, avatarSrc, onDelete }) => {
                 onClick={onDelete}
                 className="text-gray-500 hover:text-gray-700 focus:outline-none"
             >
-                <X size={16} />
+                <X size={16}
+
+                />
             </button>
         </div>
     );
