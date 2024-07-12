@@ -624,12 +624,12 @@ function ComposeDialogue() {
                     </Button>
                 </DialogTrigger>
                 <DialogContent className="bg-white max-w-[50vw]">
-                    <DialogHeader className="bg-[#f1f5f9] border-b border-[#f1f5f9] rounded-t-md rounded-b-none"
+                    <DialogHeader className="bg-[#f1f5f9] border-b rounded-t-md rounded-b-none"
                     >
                         <DialogTitle className="text-lg mt-0 mb-0 p-2.5 ml-2">
                             <div className="flex justify-center items-center">
                                 <span className="text-medium">New Message</span>
-                                <div className="ml-auto mr-1 group hover:bg-gray-200 hover:cursor-pointer rounded-md group"
+                                <div className="ml-auto mr-0 group hover:bg-gray-200 hover:cursor-pointer rounded-md group"
                                     onClick={() => setOpen(false)}
                                 >
                                     <X className="h-4 w-4 m-1 group-hover:opacity-100 opacity-70 group-hover:cursor-pointer rounded-md group-hover:bg-gray-200" onClick={() => setOpen(false)} />
