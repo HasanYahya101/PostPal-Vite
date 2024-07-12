@@ -724,7 +724,7 @@ function ComposeDialogue() {
                             </div>
                         </div>
                         <div className="max-w-[47vw] ml-auto mr-auto">
-                            <Separator className='bg-gray-200' />
+                            <Separator className='bg-gray-200 border-[0.5px]' />
                         </div>
                         <div className="flex ml-6 mr-6 mt-3 mb-3">
                             <span className="self-center">
@@ -740,18 +740,19 @@ function ComposeDialogue() {
                             </input>
                         </div>
                         <div className="max-w-[47vw] ml-auto mr-auto">
-                            <Separator className='bg-gray-200' />
+                            <Separator className='bg-gray-200 border-[0.5px]' />
                         </div>
-                        <Textarea className="h-[50vh] mt-0.5 border-none outline-none focus:border-none focus-visible:ring-transparent focus-visible:border-none bg-[#f1f5f9] hover:border-none resize-none overflow-visible contain-content"
-                            style={{
-                                outline: 'none',
-                                boxShadow: 'none',
-                                scrollbarWidth: 'none',
-                            }}
-                            placeholder="Type your message here"
-                        >
-
-                        </Textarea>
+                        <div className="max-w-[50vw] w-[50vw]">
+                            <Textarea className="h-[50vh] w-[48vw] ml-5 mr-5 mt-1.5 border-none outline-none focus:border-none focus-visible:ring-transparent focus-visible:border-none bg-white hover:border-none resize-none overflow-visible contain-content"
+                                style={{
+                                    outline: 'none',
+                                    boxShadow: 'none',
+                                    scrollbarWidth: 'none',
+                                }}
+                                placeholder="Type your message here"
+                            >
+                            </Textarea>
+                        </div>
                     </ScrollArea>
                 </DialogContent>
             </Dialog >
