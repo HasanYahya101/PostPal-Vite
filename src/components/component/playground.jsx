@@ -642,6 +642,9 @@ function ComposeDialogue() {
             e.preventDefault();
             addChip(inputValue.trim());
         }
+        else if (e.key === 'Backspace' && !inputValue) {
+            handleDelete(chips[chips.length - 1].id);
+        }
     };
 
     const addChip = (text) => {
