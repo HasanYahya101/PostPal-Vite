@@ -694,8 +694,8 @@ function ComposeDialogue() {
                                 <span className="top-0 font-normal">
                                     To:
                                 </span>
-                                <div className="w-full max-w-full px-3">
-                                    <div className="border-none rounded-lg flex flex-wrap items-center">
+                                <div className="w-full max-w-[100vw] px-3">
+                                    <div className="border rounded-lg flex flex-wrap items-center">
                                         {chips.map((chip) => (
                                             <DeleteableChip
                                                 key={chip.id}
