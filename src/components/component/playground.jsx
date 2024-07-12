@@ -691,14 +691,15 @@ function ComposeDialogue() {
                     </DialogHeader>
                     <ScrollArea
                         style={{ height: `${dialogHeight}px` }}
+                        className='w-full'
                     >
-                        <div className="flex ml-4 mr-4">
-                            <div className="flex mb-2 items-start">
+                        <div className="flex ml-4 mr-4 w-full">
+                            <div className="flex mb-2 items-start w-full">
                                 <span className="top-0 font-normal">
                                     To:
                                 </span>
-                                <div className="w-full max-w-[100vw] px-3">
-                                    <div className="border rounded-lg flex flex-wrap items-center">
+                                <div className=" w-[98%] px-3">
+                                    <div className="w-full border-none rounded-lg flex flex-wrap items-center">
                                         {chips.map((chip) => (
                                             <DeleteableChip
                                                 key={chip.id}
@@ -712,7 +713,7 @@ function ComposeDialogue() {
                                             value={inputValue}
                                             onChange={handleInputChange}
                                             onKeyDown={handleInputKeyDown}
-                                            className="flex-grow outline-none p-1 w-full text-sm"
+                                            className="flex-grow outline-none p-1 text-sm"
                                             {...(chips.length > 0 ? { placeholder: '' } : { placeholder: 'Enter recipient...' })}
                                         />
                                     </div>
