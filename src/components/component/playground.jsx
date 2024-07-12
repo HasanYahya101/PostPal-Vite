@@ -695,7 +695,7 @@ function ComposeDialogue() {
                         style={{ height: `${dialogHeight}px` }}
                         className='w-full'
                     >
-                        <div className="flex ml-4 mr-4 w-full">
+                        <div className="flex ml-4 mr-4 w-full mt-1 mb-1">
                             <div className={`flex ${chips.length !== 0 ? 'mb-0' : 'mb-[9px]'} items-start w-full`}>
                                 <span className="top-0 font-normal mr-[6px]">
                                     To:
@@ -768,7 +768,7 @@ function ComposeDialogue() {
                             </Popover>*/}
                         </div>
                         <Separator />
-                        <div className="flex ml-4 mr-4 mt-2 mb-2">
+                        <div className="flex ml-4 mr-4 mt-3 mb-3">
                             <span className="self-center">
                                 Subject:
                             </span>
