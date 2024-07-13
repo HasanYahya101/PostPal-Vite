@@ -732,7 +732,7 @@ function ComposeDialogue() {
                             <span className="self-center">
                                 Subject:
                             </span>
-                            <input className="ml-4 text-sm border-none outline-none focus:border-none focus-visible:ring-transparent focus-visible:border-none"
+                            <input className="ml-4 text-sm border-none outline-none focus:border-none focus-visible:ring-transparent focus-visible:border-none w-full max-w-[44vw]"
                                 style={{
                                     outline: 'none',
                                     boxShadow: 'none',
