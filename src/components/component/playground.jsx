@@ -701,21 +701,23 @@ function ComposeDialogue() {
                                     To:
                                 </span>
                                 <div className="px-3 w-full">
-                                    <div className="border-none rounded-lg flex flex-wrap items-center w-full">
-                                        {chips.map((chip) => (
-                                            <DeleteableChip
-                                                key={chip.id}
-                                                text={chip.text}
-                                                avatarSrc={chip.avatarSrc}
-                                                onDelete={() => handleDelete(chip.id)}
-                                            />
-                                        ))}
+                                    <div className="border-none rounded-lg flex flex-wrap items-center w-full max-w-[44vw]">
+                                        <div className="mb-1">
+                                            {chips.map((chip) => (
+                                                <DeleteableChip
+                                                    key={chip.id}
+                                                    text={chip.text}
+                                                    avatarSrc={chip.avatarSrc}
+                                                    onDelete={() => handleDelete(chip.id)}
+                                                />
+                                            ))}
+                                        </div>
                                         <input
                                             type="text"
                                             value={inputValue}
                                             onChange={handleInputChange}
                                             onKeyDown={handleInputKeyDown}
-                                            className={`flex-grow w-full max-w-[44vw] outline-none text-sm ${chips.length > 0 ? '-mt-[6.5px]' : 'mt-[3px]'}`}
+                                            className={`flex-grow w-full outline-none text-sm max-w-[43vw] ${chips.length > 0 ? '-mt-[6.5px] mb-1' : 'mt-[3px]'}`}
                                             {...(chips.length > 0 ? { placeholder: '' } : { placeholder: 'Enter your recipient here...' })}
                                             maxLength={25}
                                         />
