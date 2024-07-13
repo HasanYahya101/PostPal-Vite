@@ -745,7 +745,7 @@ function ComposeDialogue() {
                             <Separator className='bg-gray-200 border-[0.5px]' />
                         </div>
                         <div className="max-w-[50vw] w-[50vw]">
-                            <Textarea className="h-[50vh] w-[48vw] ml-5 mr-5 mt-1.5 border-none outline-none focus:border-none focus-visible:ring-transparent focus-visible:border-none bg-white hover:border-none resize-none overflow-visible contain-content"
+                            <Textarea className="h-[50vh] w-[48vw] ml-4 mr-4 mt-1.5 border-none outline-none focus:border-none focus-visible:ring-transparent focus-visible:border-none bg-white hover:border-none resize-none overflow-visible contain-content"
                                 style={{
                                     outline: 'none',
                                     boxShadow: 'none',
