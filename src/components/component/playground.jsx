@@ -462,7 +462,7 @@ export function Playground() {
                                                                 </span>
                                                             </Button>
                                                         </div>
-                                                        <div className="text-center p-2 mt-auto text-sm">
+                                                        <div className="text-center p-2 mt-auto text-sm text-muted-foreground">
                                                             You can only snooze until the end of the next week.
                                                         </div>
                                                     </div>
