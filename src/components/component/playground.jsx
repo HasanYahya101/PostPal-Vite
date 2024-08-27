@@ -566,7 +566,11 @@ export function Playground() {
 
                                 <Separator className="mb-4" />
 
-                                <Textarea className="max-h-16 w-full h-16 p-6 border-t mb-2" placeholder="Reply to William Smith">
+                                <Textarea className="max-h-16 w-full h-16 p-6 border-t mb-2 resize-none" placeholder="Reply to William Smith"
+                                    style={{
+                                        scrollbarWidth: 'none',
+                                    }}
+                                >
                                 </Textarea>
                                 <div className="p-2 mr-2 flex">
                                     <Button className="ml-auto bg-black">
