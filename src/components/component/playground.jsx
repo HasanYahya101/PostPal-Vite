@@ -301,7 +301,7 @@ export function Playground() {
                                 <div className="p-4 h-14">
                                     <div className="relative">
                                         <Search className="ml-0.5 absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                                        <Input placeholder="Search" className="pl-8" />
+                                        <Input placeholder="Search" className="pl-8 focus-visible:ring-1 focus-visible:ring-offset-0 focus-visible:ring-gray-400" />
                                     </div>
                                 </div>
 
@@ -566,7 +566,7 @@ export function Playground() {
 
                                 <Separator className="mb-4" />
 
-                                <Textarea className="max-h-16 w-full h-16 p-6 border-t mb-2 resize-none" placeholder="Reply to William Smith"
+                                <Textarea className="max-h-16 w-full h-16 p-6 border-t mb-2 resize-none focus-visible:ring-1 focus-visible:ring-offset-0 focus-visible:ring-gray-400" placeholder="Reply to William Smith"
                                     style={{
                                         scrollbarWidth: 'none',
                                     }}
