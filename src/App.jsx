@@ -1,6 +1,5 @@
 import React from 'react';
 import { Playground } from './components/component/playground';
-import { NextUIProvider } from '@nextui-org/react';
 import Apology from './components/component/apology';
 
 const isDesktop = () => {
@@ -17,9 +16,7 @@ function App() {
     }
     else {
         return (
-            <NextUIProvider>
-                <Playground />
-            </NextUIProvider>
+            <Playground />
         )
     }
 }
